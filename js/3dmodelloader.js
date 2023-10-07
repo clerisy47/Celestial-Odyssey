@@ -88,6 +88,7 @@ function plotPointOnEarth(radius, lat, lon, scene, pointScale) {
     color: 0x049ef4,
   });
   const boxMesh = new THREE.Mesh(box, boxMat);
+  console.log(boxMesh);
 
   let direction = new THREE.Vector3(x, y, z).normalize();
 
@@ -195,6 +196,7 @@ function load3d(scene, model) {
     // plotPointOnEarth(obj.r, 30, 138, scene, 0.02);
 
     scene.add(mesh);
+    console.log(mesh);
     changeModel(mesh, model);
   }
   toggleSound();
