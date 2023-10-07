@@ -117,7 +117,7 @@ export const ModelData = {
 
           lon: 57.2,
 
-          img: "mead crater venus.jpg",
+          img: "mead crater venus.png",
 
           script:
             "Welcome to Mead Crater on Venus, where cosmic history is etched in impact scars! This massive bowl, roughly 170 miles (280 kilometres) wide, is like the granddaddy of all potholes. It's a reminder of our solar system's tumultuous past. The Magellan science team named this crater Mead, after Margaret Mead, the American Anthropologist",
