@@ -18,6 +18,7 @@ import {
 } from "./js/uicontroller/controller";
 import WebState from "./js/state";
 import { resetLocation } from "./js/uicontroller/uiMain";
+import { stopInterval } from "./js/utils";
 
 addToolTip();
 const elt3d = document.querySelector(".scene");
@@ -106,11 +107,15 @@ document
 document.querySelector(".vec1").addEventListener("click", hidePlanetBox);
 document.querySelector(".vec2").addEventListener("click", hidePlanetBox);
 document.querySelector(".info-box").addEventListener("click", showInfo);
-document
-  .querySelector(".close-info-text-btn")
-  .addEventListener("click", closeInfo);
+document.querySelector(".close-info-text-btn").addEventListener("click", () => {
+  closeInfo();
+  stopInterval();
+});
 document.querySelector(".bot-img").addEventListener("click", toggleInpuBox);
 document.querySelector(".askAI").addEventListener("click", toggleInpuBox);
 document
   .querySelector(".location-info-box-closebtn")
-  .addEventListener("click", resetLocation);
+  .addEventListener("click", () => {
+    resetLocation();
+    stopInterval();
+  });
