@@ -152,7 +152,7 @@ document
     stopSpeech();
   });
 
-document.querySelector(".background-sound").onclick = (e) => {
+document.querySelector(".background-sound").addEventListener("click", (e) => {
   let elt = e.target;
   if (elt.parentElement.dataset.played == "true") {
     elt.innerHTML = `<svg width="85" height="156" viewBox="0 0 85 156" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,4 +176,4 @@ document.querySelector(".background-sound").onclick = (e) => {
 `;
     elt.parentElement.dataset.played = "true";
   }
-};
+});
