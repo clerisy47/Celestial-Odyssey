@@ -10,6 +10,7 @@ var WebState = {
   static: true,
   ended: true,
   ui_music: new Audio("../../assets/sounds/ui_sounds/background_sound.mp3"),
+  isMusicOn: true,
 };
 window.WebState = WebState;
 
@@ -116,7 +117,7 @@ export function changeModel(model, name) {
   );
 
   tl.play().then(() => {
-    WebState.ui_music.play();
+    if (WebState.isMusicOn) WebState.ui_music.play();
   });
 }
 
