@@ -72,7 +72,7 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: [],
+      satellite: ["No Satellite"],
     },
   },
   venus: {
@@ -150,7 +150,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: [],
+      satellite: ["No Satellite"],
     },
   },
 
