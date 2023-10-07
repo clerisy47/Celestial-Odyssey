@@ -9,12 +9,14 @@ var WebState = {
   started: false,
   static: true,
   ended: true,
+  ui_music: new Audio("../../assets/sounds/ui_sounds/background_sound.mp3"),
 };
 window.WebState = WebState;
 
 export function initWebState(scene) {
   WebState.scene = scene;
   stopVideoNoAnimation();
+  // WebState.ui_music.play();
 }
 export function removeTracker() {
   WebState.tracker.forEach((track) => {

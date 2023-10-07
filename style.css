@@ -144,20 +144,20 @@ body {
 .vec1{
   position: absolute;
   top: 13px;
-  left: 40rem;
+  left: 42vw;
 }
 .vec2{
   position: absolute;
   top: 13px;
-  right: 39.7rem;
+  right: 41.5vw;
 }
 .vec1-expand {
-  left: 19rem;
+  left: 20vw;
   cursor: pointer;
 }
 
 .vec2-expand {
-  right: 16.9rem;
+  right: 17.8vw;
   cursor: pointer;
 }
 
@@ -349,7 +349,7 @@ body {
   border: 2px solid var(--ui-border);
   background: var(--ui-background);
   position: absolute;
-  left: 55.8rem;
+  left: 58.2vw;
   bottom: 3.5rem;
   font-family: Heading-tech;
   color: white;
@@ -357,6 +357,7 @@ body {
   padding: 0.8rem;
   cursor: pointer;
 }
+
 
 .ui-model {
   position: relative;
