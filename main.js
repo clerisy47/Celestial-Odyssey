@@ -91,9 +91,39 @@ animate();
 // runSketch();
 load3d(scene, "earth");
 
+var hover_sound = new Audio("./assets/sounds/ui_sounds/hover_sound.mp3");
+var spaceship_sound = new Audio(
+  "./assets/sounds/ui_sounds/spaceship_sound.mp3"
+);
+
 document.querySelectorAll(".planet").forEach((p) => {
   p.addEventListener("click", function () {
+    hover_sound.play();
+    disablePlanetClick();
+    setTimeout(() => {
+      enablePlanetClick();
+    }, 5000);
     load3d(scene, this.classList[1]);
+    setTimeout(() => {
+      spaceship_sound.play();
+    }, 300);
+  });
+});
+
+function disablePlanetClick() {
+  document.querySelectorAll(".planet").forEach((p) => {
+    p.style.pointerEvents = "none";
+  });
+}
+function enablePlanetClick() {
+  document.querySelectorAll(".planet").forEach((p) => {
+    p.style.pointerEvents = "auto";
+  });
+}
+
+document.querySelectorAll(".planet").forEach((p) => {
+  p.addEventListener("mouseenter", function () {
+    console.log("hovered");
   });
 });
 

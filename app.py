@@ -1,5 +1,8 @@
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
+from flask import Flask, request, render_template
+
+flask_app = Flask(__name__)
 
 def generate_response(model, tokenizer, prompt, max_length=100, temperature=0.1, k=50):
     input_ids = tokenizer.encode(prompt, return_tensors="pt")
@@ -28,3 +31,6 @@ prompt = input()
 print("Bot is thinking")
 response = generate_response(my_chat_model, my_chat_tokenizer, prompt, max_length=100)
 print("Generated response:", response)
+
+if __name__ == "__main__":
+    flask_app.run(debug=True)
