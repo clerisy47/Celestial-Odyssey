@@ -38,6 +38,7 @@ body {
 }
 .data-box {
   position: absolute;
+  z-index: 5;
   right: 0;
   top: 0;
   bottom: 0;
@@ -505,11 +506,13 @@ svg:hover {
   position: absolute;
   right: 1rem;
   top: 1rem;
+  z-index: 10;
 }
 
 
 .background-sound svg{
-  width: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .background-sound path{
