@@ -21,7 +21,7 @@ export const ModelData = {
             "Mercury does not have a thick atmosphere to protect it from space debris. The small planet is riddled with craters, but none as spectacular as the Caloris Basin. “Basin” is what geologists call craters larger than about 186 miles (300 kilometres) in diameter. Caloris is about 950 miles (1,525 kilometres) across and is ringed by mile-high mountains. For scale, the state of Texas is 773 miles (1,244 kilometres) wide from east to west. ",
         },
         {
-          name: "North Pole Of Mercury",
+          name: "North Pole",
 
           lat: 90,
 
@@ -72,15 +72,15 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: [],
+      satellite: ["No Satellite"],
     },
   },
   venus: {
-    type: "3d",
+    type: "nasa",
 
-    r: 300,
+    // r: 300,
 
-    scale: 0.8,
+    scale: 0.005,
 
     ui: {
       info: "It's a cloud-swaddled planet named for a love goddess, and often called Earth’s twin. But pull up a bit closer, and Venus turns hellish. Our nearest planetary neighbour, the second planet from the Sun, has a surface hot enough to melt lead. The atmosphere is so thick that, from the surface, the Sun is just a smear of light. ",
@@ -150,7 +150,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: [],
+      satellite: ["No Satellite"],
     },
   },
 

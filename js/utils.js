@@ -12,7 +12,7 @@ export function generateCUUID() {
     // Convert the buffer to a hex string
     const uuidArray = Array.from(buffer);
     const uuidHex = uuidArray
-      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .map((byte) => byte.toString(16).padStart(2, "0")) 
       .join("");
 
     // Format the UUID string with dashes
@@ -54,7 +54,11 @@ let voices = window.speechSynthesis.getVoices();
 export function textToVoice(text) {
   speech.text = text;
   speech.voice = voices[0];
-  speech.rate = 1.5;
+  speech.rate = 1;
   window.speechSynthesis.speak(speech);
   console.log(voices);
+}
+
+export function stopSpeech() {
+  if (speech) window.speechSynthesis.cancel();
 }

@@ -101,9 +101,8 @@ export function showPlanetBox() {
   gsap.from(".vec1", { duration: 0.5, x: "21rem" });
   gsap.from(".vec2", { duration: 0.5, x: "-20.7rem" });
   gsap.from(".planet-box", {
-    duration: 0.8,
+    duration: 0.4,
     y: "-130%",
-    ease: "bounce",
     delay: 0.2,
   });
   isBoxVisible = true;
