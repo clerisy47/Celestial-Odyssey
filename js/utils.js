@@ -58,3 +58,7 @@ export function textToVoice(text) {
   window.speechSynthesis.speak(speech);
   console.log(voices);
 }
+
+export function stopSpeech() {
+  if (speech) window.speechSynthesis.cancel();
+}

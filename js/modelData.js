@@ -76,9 +76,9 @@ export const ModelData = {
     },
   },
   venus: {
-    type: "nasa",
+    type: "3d",
 
-    // r: 2,
+    r: 300,
 
     scale: 0.8,
 
@@ -201,11 +201,8 @@ export const ModelData = {
 
       temperature: {
         min: -89,
-
         max: 58,
-
         mean: 15,
-
         unit: "°C",
       },
 
