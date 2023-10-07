@@ -32,15 +32,12 @@ let i = 0;
 export function appendUIModel(code, type) {
   let uiElt = document.querySelector(`.${type}`);
   uiElt.innerHTML += code;
-  // uiElt.querySelectorAll(".ui1")[i++].addEventListener("click", (e) => {
-  //   console.log(e.currentTarget.textContent);
-  // });
-  // if (i === 3) i = 0;
 }
 
 export function addUI(type, obj) {
   if (type == "image-box") {
-    appendUIModel(ImageBox(obj.text, obj.img), type);
+    console.log(obj);
+    appendUIModel(ImageBox(obj.sub_name, obj.img), type);
   }
 }
 

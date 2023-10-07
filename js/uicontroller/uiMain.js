@@ -11,7 +11,11 @@ function Initilize() {
   let model = WebState.modelName;
   let data = ModelData[model];
   data?.ui.location.forEach((location) => {
-    addUI("image-box", { text: location.name, img: location.img });
+    addUI("image-box", {
+      text: location.name,
+      img: location.img,
+      sub_name: location.sub_name,
+    });
   });
   if (data.ui.minerals) addDataBox("Minerals", data?.ui.minerals);
   if (data.ui.satellite) addDataBox("satellite", data?.ui.satellite);
