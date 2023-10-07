@@ -13,19 +13,19 @@ function Initilize() {
   data?.ui.location.forEach((location) => {
     addUI("image-box", { text: location.name, img: location.img });
   });
-  addDataBox("Minerals", data?.ui.minerals);
-  addDataBox("satellite", data?.ui.satellite);
+  if (data.ui.minerals) addDataBox("Minerals", data?.ui.minerals);
+  if (data.ui.satellite) addDataBox("satellite", data?.ui.satellite);
   createGasChart();
   document.querySelector(".sound-box").classList.add("show-sound-box");
   document.querySelector(".info-box").classList.add("show-info-box");
-  document.querySelectorAll(".dataUi").forEach((eltData) => {
-    VanillaTilt.init(eltData, {
-      max: 5,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.4,
-    });
-  });
+  // document.querySelectorAll(".dataUi").forEach((eltData) => {
+  //   VanillaTilt.init(eltData, {
+  //     max: 5,
+  //     speed: 400,
+  //     glare: true,
+  //     "max-glare": 0.4,
+  //   });
+  // });
   //   addUI("chart-box", { text: "Gas Composition", chart: gasChart });
 
   let ui_model = document.querySelectorAll(".ui-model");
@@ -37,7 +37,9 @@ function Initilize() {
         uiM
       );
       let location = ModelData[WebState.modelName].ui.location[eltIndex];
-      plotPointOnEarth(r, location.lat, location.lon, scene, 0.02);
+      if (location.lat && location.lon) {
+        plotPointOnEarth(r, location.lat, location.lon, scene, 0.02);
+      }
     });
   });
 }

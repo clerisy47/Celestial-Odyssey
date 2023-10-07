@@ -50,9 +50,8 @@ export function addDataBox(heading, data) {
       return d + "</br>";
     })
     .join(" ");
-  console.log(mainPoint);
   let template = `
-            <div class="dataUi data1">
+            <div class="dataUi data1 ${heading}">
             <h3>${heading}:</h3>
             <p>
               ${mainPoint}
