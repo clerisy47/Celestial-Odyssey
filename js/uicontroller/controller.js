@@ -42,14 +42,20 @@ export function addUI(type, obj) {
 }
 
 export function addDataBox(heading, data) {
-  let mainPoint = data
+  let newData = data;
+  if (heading == "satellite") {
+    newData = data.slice(1, data.length);
+  }
+  let mainPoint = newData
     .map((d) => {
       return d + "</br>";
     })
     .join(" ");
   let template = `
             <div class="dataUi data1 ${heading}">
-            <h3>${heading}:</h3>
+            <h3>${
+              heading == "satellite" ? heading + ":  " + data[0] : heading
+            }</h3>
             <p>
               ${mainPoint}
             </p>
