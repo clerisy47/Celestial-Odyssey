@@ -78,7 +78,7 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: ["No Satellite"],
+      satellite: [0,"No Satellite"],
     },
   },
   venus: {
@@ -162,7 +162,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: ["No Satellite"],
+      satellite: [0,"No Satellite"],
     },
   },
 
@@ -234,7 +234,7 @@ export const ModelData = {
         other: 1,
       },
 
-      satellite: ["Moon"],
+      satellite: [1,"Moon"],
     },
   },
 
@@ -376,7 +376,7 @@ export const ModelData = {
         other: 0.7,
       },
 
-      satellite: ["Deimos", "Phobos"],
+      satellite: [2,"Deimos", "Phobos"],
     },
   },
 
@@ -440,6 +440,7 @@ export const ModelData = {
       },
 
       satellite: [
+        95,
         "Io",
         "Europa",
         "Ganymede",
@@ -530,6 +531,7 @@ export const ModelData = {
       },
 
       satellite: [
+        146,
         "Titan",
         "Rhea",
         "Iapetus",
@@ -619,6 +621,7 @@ export const ModelData = {
       },
 
       satellite: [
+        27,
         "Miranda",
         "Ariel",
         "Umbriel",
@@ -710,6 +713,7 @@ export const ModelData = {
       },
 
       satellite: [
+        14,
         "Triton",
         "Proteus",
         "Nereid",
