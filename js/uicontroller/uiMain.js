@@ -27,10 +27,11 @@ function Initilize() {
   //   });
   // });
   //   addUI("chart-box", { text: "Gas Composition", chart: gasChart });
-
+  var click_sound = new Audio("../../assets/sounds/ui_sounds/click_sound.mp3");
   let ui_model = document.querySelectorAll(".ui-model");
   ui_model.forEach((uiM) => {
     uiM.addEventListener("click", (e) => {
+      click_sound.play();
       showLocationData(e.currentTarget.children[1].textContent);
       var eltIndex = Array.prototype.indexOf.call(
         uiM.parentElement.children,

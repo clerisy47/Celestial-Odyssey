@@ -16,7 +16,8 @@ window.WebState = WebState;
 export function initWebState(scene) {
   WebState.scene = scene;
   stopVideoNoAnimation();
-  // WebState.ui_music.play();
+  WebState.ui_music.loop = true;
+  WebState.ui_music.play();
 }
 export function removeTracker() {
   WebState.tracker.forEach((track) => {
@@ -34,6 +35,7 @@ export function deleteModel() {
 }
 
 export function deleteUI() {
+  WebState?.ui_music.pause();
   let boxes = document.querySelectorAll(".uiBox");
   boxes.forEach((elt) => {
     elt.innerHTML = "";
@@ -113,7 +115,9 @@ export function changeModel(model, name) {
     }
   );
 
-  tl.play();
+  tl.play().then(() => {
+    WebState.ui_music.play();
+  });
 }
 
 export function addTracker(track) {

@@ -92,6 +92,7 @@ animate();
 load3d(scene, "earth");
 
 var hover_sound = new Audio("./assets/sounds/ui_sounds/hover_sound.mp3");
+var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
 var spaceship_sound = new Audio(
   "./assets/sounds/ui_sounds/spaceship_sound.mp3"
 );
@@ -131,13 +132,18 @@ document.querySelector(".sound-box").addEventListener("click", () => {
   toggleSound(WebState.modelName);
 });
 
-document
-  .querySelector(".planet-text-box")
-  .addEventListener("click", showPlanetBox);
+document.querySelector(".planet-text-box").addEventListener("click", () => {
+  showPlanetBox();
+  click_sound.play();
+});
 document.querySelector(".vec1").addEventListener("click", hidePlanetBox);
 document.querySelector(".vec2").addEventListener("click", hidePlanetBox);
-document.querySelector(".info-box").addEventListener("click", showInfo);
+document.querySelector(".info-box").addEventListener("click", () => {
+  showInfo();
+  click_sound.play();
+});
 document.querySelector(".close-info-text-btn").addEventListener("click", () => {
+  click_sound.play();
   closeInfo();
   stopInterval();
   stopSpeech();
@@ -147,6 +153,7 @@ document.querySelector(".askAI").addEventListener("click", toggleInpuBox);
 document
   .querySelector(".location-info-box-closebtn")
   .addEventListener("click", () => {
+    click_sound.play();
     resetLocation();
     stopInterval();
     stopSpeech();
