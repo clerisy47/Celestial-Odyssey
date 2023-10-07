@@ -299,7 +299,7 @@ export const ModelData = {
 
           img: "olympus mons.jpg",
 
-          script: "The tallest volcano in the solar system",
+          script: "Olympus Mons, the crown jewel of Mars, is a colossal volcano that's truly out of this world! Standing at a towering 72,000 feet (21.9 kilometres), it's the tallest volcano in our solar system. Imagine skiing down slopes that stretch for hundreds of miles! But don't forget your spacesuit – with its otherworldly charm, this Martian giant is a must-see for any aspiring space tourist. ",
         },
 
         {
@@ -311,7 +311,7 @@ export const ModelData = {
 
           img: "valles marineris.jpg",
 
-          script: "A vast canyon system",
+          script: "Welcome to Valles Marineris, Mars' own Grand Canyon on steroids! This colossal trench stretches for over 2,500 miles (4,000 kilometres) and plunges as deep as 7 miles (11 kilometres). It's like the ultimate thrill ride for space tourists, offering breathtaking Martian vistas and geological wonders. ",
         },
 
         {
@@ -323,7 +323,7 @@ export const ModelData = {
 
           img: "hellas planitia.jpg",
 
-          script: "Impact place",
+          script: "Welcome to Hellas Planitia, the Martian's very own 'Great Basin'! Picture an epic crater, so vast it could fit the entire country of France. With a diameter of about 1,400 miles and a depth reaching the lowest elevations on Mars, Hellas is one of the largest impact craters in the solar system. There has also been evidences that the ground here is rich with ice. ",
         },
       ],
 
