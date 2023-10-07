@@ -21,7 +21,7 @@ export const ModelData = {
             "Mercury does not have a thick atmosphere to protect it from space debris. The small planet is riddled with craters, but none as spectacular as the Caloris Basin. “Basin” is what geologists call craters larger than about 186 miles (300 kilometres) in diameter. Caloris is about 950 miles (1,525 kilometres) across and is ringed by mile-high mountains. For scale, the state of Texas is 773 miles (1,244 kilometres) wide from east to west. ",
         },
         {
-          name: "North Pole Of Mercury",
+          name: "North Pole",
 
           lat: 90,
 
