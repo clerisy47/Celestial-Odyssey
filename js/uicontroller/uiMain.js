@@ -57,7 +57,7 @@ async function showLocationData(location) {
     }
   });
   let infoText = ModelData[WebState.modelName].ui.location.filter((l) => {
-    if (l.name === location) return l;
+    if (l.sub_name === location) return l;
   });
   infoText = infoText[0].script;
   let box = document.querySelector(".location-info-box");
