@@ -34,13 +34,19 @@ export function generateCUUID() {
   }
 }
 
-export function createTypingEffect(element, text, i = 0) {
-  if (i === text.length - 1) return;
-  if (i === 0) element.textContent = "";
-  element.textContent += text[i];
-  setTimeout(() => {
-    createTypingEffect(element, text, i + 1);
+var timer = null;
+
+export function createTypingEffect(element, text) {
+  startInterval(element, text);
+}
+function startInterval(element, text) {
+  let i = 0;
+  timer = setInterval(function () {
+    if (i < text.length) element.textContent += text[i++];
   }, 20);
+}
+export function stopInterval() {
+  if (timer) clearInterval(timer);
 }
 
 let speech = new SpeechSynthesisUtterance();
