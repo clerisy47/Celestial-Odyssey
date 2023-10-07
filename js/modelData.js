@@ -76,11 +76,11 @@ export const ModelData = {
     },
   },
   venus: {
-    type: "3d",
+    type: "nasa",
 
-    r: 300,
+    // r: 300,
 
-    scale: 0.8,
+    scale: 0.005,
 
     ui: {
       info: "It's a cloud-swaddled planet named for a love goddess, and often called Earth’s twin. But pull up a bit closer, and Venus turns hellish. Our nearest planetary neighbour, the second planet from the Sun, has a surface hot enough to melt lead. The atmosphere is so thick that, from the surface, the Sun is just a smear of light. ",
