@@ -18,7 +18,7 @@ import {
 } from "./js/uicontroller/controller";
 import WebState from "./js/state";
 import { resetLocation } from "./js/uicontroller/uiMain";
-import { stopInterval } from "./js/utils";
+import { stopInterval, stopSpeech } from "./js/utils";
 
 addToolTip();
 const elt3d = document.querySelector(".scene");
@@ -110,6 +110,7 @@ document.querySelector(".info-box").addEventListener("click", showInfo);
 document.querySelector(".close-info-text-btn").addEventListener("click", () => {
   closeInfo();
   stopInterval();
+  stopSpeech();
 });
 document.querySelector(".bot-img").addEventListener("click", toggleInpuBox);
 document.querySelector(".askAI").addEventListener("click", toggleInpuBox);
@@ -118,4 +119,5 @@ document
   .addEventListener("click", () => {
     resetLocation();
     stopInterval();
+    stopSpeech();
   });
