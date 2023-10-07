@@ -513,6 +513,7 @@ svg:hover {
 .background-sound svg{
   width: 20px;
   height: 20px;
+  pointer-events: none;
 }
 
 .background-sound path{

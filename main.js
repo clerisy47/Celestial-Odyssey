@@ -159,7 +159,7 @@ document
     stopSpeech();
   });
 
-document.querySelector(".background-sound").onclick = (e) => {
+document.querySelector(".background-sound").addEventListener("click", (e) => {
   let elt = e.target;
   if (elt.parentElement.dataset.played == "true") {
     WebState?.ui_music.pause();
@@ -187,4 +187,4 @@ document.querySelector(".background-sound").onclick = (e) => {
 `;
     elt.parentElement.dataset.played = "true";
   }
-};
+});
