@@ -1,0 +1,463 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+:root {
+  --ui-border: rgba(0, 86, 86, 0.6);
+  --ui-background: rgba(2, 64, 99, 0.511);
+}
+
+@font-face {
+  font-family: Heading-tech;
+  src: url("/assets/fonts/OriginTech personal use.otf");
+}
+@font-face {
+  font-family: sub-tech;
+  src: url("/assets/fonts/Game Of Squids.otf");
+}
+
+#Vector_3 {
+  stroke: rgb(2 132 132 / 60%);
+  stroke-width: 3;
+}
+
+.ui {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.data-box {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1px;
+}
+
+.dataUi {
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+
+  backdrop-filter: blur(5px);
+  font-family: Heading-tech;
+  color: white;
+  padding: 10px;
+  max-width: 200px;
+}
+
+.dataUi.dark {
+  background: rgba(2, 64, 99, 0.511);
+}
+
+.data-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dataUi h3 {
+  font-family: sub-tech;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.planet-box {
+  position: absolute;
+  left: 23%;
+  height: 70px;
+  width: 56%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 4px solid rgba(128, 172, 239, 0.58);
+  background: rgba(88, 167, 211, 0.52); */
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  display: none;
+}
+.show-planet-box{
+  display: flex;
+}
+
+.planet-text-box{
+  height: 70px;
+  width: 10rem;
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top: 20px;
+  left: 45vw;
+  cursor: pointer;
+}
+
+.hide-planet-text-box{
+  display: none;
+}
+
+.planet-text{
+  color: white;
+  font-size: 1.7rem;
+  font-family: Heading-tech;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+
+.vec1{
+  position: absolute;
+  top: 13px;
+  left: 40rem;
+}
+.vec2{
+  position: absolute;
+  top: 13px;
+  right: 39.7rem;
+}
+.vec1-expand {
+  left: 19rem;
+  cursor: pointer;
+}
+
+.vec2-expand {
+  right: 16.9rem;
+  cursor: pointer;
+}
+
+.planet {
+  transform: scale(0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.planet:hover {
+  transform: scale(1);
+  cursor: pointer;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+}
+
+.info-box{
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  position: absolute;
+  right: 20rem;
+  top: 7rem;
+  font-family: Heading-tech;
+  color: white;
+  font-size: x-large;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+.show-info-box{
+  display: inline;
+}
+
+.info-text-box{
+  color: white;
+  font-family: Heading-tech;
+  font-style: italic;
+  font-size: larger;
+  width: 43vw;
+  height: 40vh;
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  position: absolute;
+  left: 26vw;
+  top: 24vh;
+  padding: 2rem;
+  line-height: 1.5rem;
+  display: none;
+  cursor: default;
+}
+.show-info-text-box{
+  display: block;
+}
+
+.close-info-text-btn{
+  padding: 0.2rem 0.6rem 0.2rem 0.4rem;
+  border: 2px solid #00343499;
+  background: rgba(88, 167, 211, 0.52);
+  display: inline;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  cursor: pointer;
+}
+.close-info-text-btn:hover, .location-info-box-closebtn:hover{
+  font-size: x-large;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.location-info-box{
+  position: absolute;
+  left: 3rem;
+  top: 7rem;
+  font-family: Heading-tech;
+  color: white;
+  font-size: x-large;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: none;
+}
+.show-location-info-box{
+  display: block;
+}
+.location-info-text-box{
+  color: white;
+  font-family: Heading-tech;
+  font-style: italic;
+  font-size: 1rem;
+  width: 17vw;
+  height: 60vh;
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  position: absolute;
+  left: -3vw;
+  top: 8.8vh;
+  padding: 2rem;
+  line-height: 1.5rem;
+  /* display: none; */
+  cursor: default;
+  overflow: hidden;
+}
+
+.location-info-box-closebtn{
+  padding: 0.2rem 0.6rem 0.2rem 0.4rem;
+  border: 2px solid #00343499;
+  background: rgba(88, 167, 211, 0.52);
+  display: inline;
+  margin-left: 14.3rem;
+  position: absolute;
+  top: 5.3rem;
+  cursor: pointer;
+}
+
+.chatbot {
+  padding-left: 10px;
+  position: absolute;
+  height: 100px;
+  left: 65%;
+  bottom: 6%;
+  border: 2px solid #00343499;
+  background: rgba(88, 167, 211, 0.52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 130px;
+  overflow: hidden;
+}
+
+.expand-chatbot{
+  width: 752px;
+  border: 2px solid #00343499;
+  background: rgba(88, 167, 211, 0.52);
+}
+
+.bot-text {
+  font-size: 1.4rem;
+}
+
+.input-box {
+  position: relative;
+  width: 550px;
+  display: none;
+}
+.show-input-box{
+  display: inline;
+}
+
+.input-box input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #00343499;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: rgba(27, 81, 110, 0.52);
+}
+
+.placeholder {
+  position: absolute;
+  bottom: 28%;
+  left: 2%;
+  color: white;
+  font-size: 1.5rem;
+  opacity: 1;
+  text-transform: uppercase;
+  font-style: italic;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-box input:valid ~ label,
+.input-box input:focus ~ label {
+  bottom: 98%;
+  opacity: 0.75;
+  font-size: 1rem;
+}
+
+.bot-img {
+  transform: scale(0.75);
+  position: absolute;
+  right: 0;
+}
+
+.askAI{
+  border: 2px solid var(--ui-border);
+  background: var(--ui-background);
+  position: absolute;
+  left: 55.8rem;
+  bottom: 3.5rem;
+  font-family: Heading-tech;
+  color: white;
+  font-size: x-large;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.ui-model {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: min-content;
+}
+
+.ui-model p {
+  position: absolute;
+  right: 10px;
+  bottom: 3px;
+  /* font-family: sub-tech; */
+  font-family: Heading-tech;
+  pointer-events: none;
+  font-size: 0.6em;
+  color: white;
+}
+
+.spaceship {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#wrap-effect {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: brightness(0.5) saturate(0.5);
+  width: 100vw;
+  height: 100vh;
+}
+#wrap-effect {
+  pointer-events: none;
+}
+#Vector_3 {
+  fill: none;
+  stroke: rgb(0, 87, 87);
+  stroke-width: 2;
+  animation: pulsate 1s infinite;
+  animation-play-state: paused;
+  transition: stroke-width 0.2s ease;
+}
+
+/* Create the neon light effect using text-shadow */
+#Vector_3 {
+  filter: drop-shadow(0 0 10px rgba(2, 132, 132, 1));
+}
+
+svg:hover  #Vector_3 {
+  stroke-width: 5;
+  animation-play-state: running;
+}
+svg:hover {
+filter: saturate(1.5);
+}
+
+.data-box{
+  background-color: var(--ui-background);
+  padding: 10px;
+}
+
+/* Add animation to make the effect pulsate */
+@keyframes pulsate {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(2, 132, 132, 1));
+  }
+  50% {
+    filter: none;
+  }
+  100% {
+    filter: drop-shadow(0 0 10px rgba(2, 132, 132, 1));
+  }
+}
+
+.image-box {
+  width: min-content;
+}
+
+
+
+.sound-box {
+  position: absolute;
+  right: 17.5rem;
+  top: 8.5rem;
+  display: none;
+  visibility: hidden;
+  color: #7304c2;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.show-sound-box {
+  display: inline;
+  pointer-events: auto;
+  cursor: pointer;
+  visibility: visible;
+}
+
+.box {
+  pointer-events: auto;
+}
+.box > * {
+  pointer-events: auto;
+}
+
+/* Tippy theme */
+
+.tippy-box[data-theme~="tomato"] {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 77, 121, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
