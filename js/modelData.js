@@ -11,6 +11,8 @@ export const ModelData = {
         {
           name: "Caloris Basin",
 
+          sub_name : "Crater",
+
           lat: 30.5,
 
           lon: -106,
@@ -23,6 +25,8 @@ export const ModelData = {
         {
           name: "North Pole",
 
+          sub_name : "Pole",
+
           lat: 90,
 
           lon: 0,
@@ -34,6 +38,8 @@ export const ModelData = {
         },
         {
           name: "Mercury In Color",
+
+          sub_name : "Mercury In Color",
 
           img: "mercury in color.jpg",
 
@@ -72,7 +78,7 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: ["No Satellite"],
+      satellite: [0,"No Satellite"],
     },
   },
   venus: {
@@ -89,6 +95,8 @@ export const ModelData = {
         {
           name: "Quetzalpetlatl Corona",
 
+          sub_name : "Volcano",
+
           lat: -68,
 
           lon: 357,
@@ -101,6 +109,8 @@ export const ModelData = {
         {
           name: "Maat Mons",
 
+          sub_name : "Volcano",
+
           lat: 0.5,
 
           lon: 194.6,
@@ -112,6 +122,8 @@ export const ModelData = {
         },
         {
           name: "Mead Crater",
+
+          sub_name : "Crater",
 
           lat: 12.5,
 
@@ -150,7 +162,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: ["No Satellite"],
+      satellite: [0,"No Satellite"],
     },
   },
 
@@ -165,6 +177,8 @@ export const ModelData = {
         {
           name: "Sagarmatha",
 
+          sub_name : "Mountain",
+
           lat: 27.9881,
 
           lon: 86.925,
@@ -177,6 +191,8 @@ export const ModelData = {
         {
           name: "Grand Canyon",
 
+          sub_name : "Canyon",
+
           lat: 36.107,
 
           lon: -112.113,
@@ -188,6 +204,8 @@ export const ModelData = {
 
         {
           name: "Great Barrier Reef",
+
+          sub_name : "",
 
           lat: -18.2871,
 
@@ -216,7 +234,7 @@ export const ModelData = {
         other: 1,
       },
 
-      satellite: ["Moon"],
+      satellite: [1,"Moon"],
     },
   },
 
@@ -232,6 +250,8 @@ export const ModelData = {
         {
           name: "Apollo 11 Landing Site",
 
+          sub_name : "Landing Site",
+
           lat: 0.67416,
 
           lon: 109,
@@ -242,7 +262,9 @@ export const ModelData = {
             "Hey future lunar explorers! Welcome to the moon's blockbuster stage—Apollo 11's historic landing site! This is where Neil Armstrong and Buzz Aldrin rocked the first moonwalk in 1969, leaving footprints and a lunar module named 'Eagle' as a testament to human ingenuity. Imagine stepping into their cosmic shoes, feeling the awe of this celestial movie set. Your lunar adventure begins here, where history and the moon collide!",
         },
         {
-          name: "Lunar Base Concept",
+          name: "NASA Lunar Base Concept",
+
+          sub_name : "Base Concept",
 
           img: "lunar base concept.jpg",
 
@@ -251,6 +273,8 @@ export const ModelData = {
         },
         {
           name: "Lunar Water",
+
+          sub_name : "Water source",
 
           img: "lunar water.jpg",
 
@@ -290,6 +314,8 @@ export const ModelData = {
         {
           name: "Olympus Mons",
 
+          sub_name : "Volcano",
+
           lat: 18.5,
 
           lon: -42.3,
@@ -302,6 +328,8 @@ export const ModelData = {
         {
           name: "Valles Marineris",
 
+          sub_name : "Canyon",
+
           lat: -10.9,
 
           lon: 22.8,
@@ -313,6 +341,8 @@ export const ModelData = {
 
         {
           name: "Hellas Planitia",
+
+          sub_name : "Crater",
 
           lat: 40.4,
 
@@ -346,7 +376,7 @@ export const ModelData = {
         other: 0.7,
       },
 
-      satellite: ["Deimos", "Phobos"],
+      satellite: [2,"Deimos", "Phobos"],
     },
   },
 
@@ -362,6 +392,8 @@ export const ModelData = {
         {
           name: "The Great Red Spot",
 
+          sub_name : "Storm",
+
           lat: -14,
 
           lon: 100,
@@ -374,6 +406,8 @@ export const ModelData = {
         {
           name: "Jupiter's Interior",
 
+          sub_name : "Structure",
+
           img: "jupiter with no land.webp",
 
           script:
@@ -381,6 +415,8 @@ export const ModelData = {
         },
         {
           name: "High Above Jupiter's Sky",
+
+          sub_name : "Sky",
 
           img: "high above jupiters sky.webp",
 
@@ -404,6 +440,7 @@ export const ModelData = {
       },
 
       satellite: [
+        95,
         "Io",
         "Europa",
         "Ganymede",
@@ -440,6 +477,8 @@ export const ModelData = {
         {
           name: "Titan",
 
+          sub_name : "Satellite",
+
           img: "titan.jpg",
 
           script:
@@ -447,6 +486,8 @@ export const ModelData = {
         },
         {
           name: "The Great White Spot",
+
+          sub_name : "Storm",
 
           lat: 23,
 
@@ -459,6 +500,8 @@ export const ModelData = {
         },
         {
           name: "Dragon Storm",
+
+          sub_name : "Storm",
 
           lat: -26,
 
@@ -488,6 +531,7 @@ export const ModelData = {
       },
 
       satellite: [
+        146,
         "Titan",
         "Rhea",
         "Iapetus",
@@ -524,6 +568,8 @@ export const ModelData = {
         {
           name: "Polar Cyclone",
 
+          sub_name : "Cyclone",
+
           img: "polar cyclone.jpg",
 
           script:
@@ -532,6 +578,8 @@ export const ModelData = {
         {
           name: "Uranus Rings",
 
+          sub_name : "ring system",
+
           img: "uranus rings.jpg",
 
           script:
@@ -539,6 +587,8 @@ export const ModelData = {
         },
         {
           name: "Miranda",
+
+          sub_name : "Satellite",
 
           img: "miranda.webp",
 
@@ -571,6 +621,7 @@ export const ModelData = {
       },
 
       satellite: [
+        27,
         "Miranda",
         "Ariel",
         "Umbriel",
@@ -602,6 +653,8 @@ export const ModelData = {
         {
           name: "The Great Dark Spot",
 
+          sub_name : "Storm",
+
           lat: -12,
 
           lon: 135,
@@ -614,6 +667,8 @@ export const ModelData = {
         {
           name: "Wizard's Eye",
 
+          sub_name : "Storm",
+
           lat: -36.5,
 
           lon: -120,
@@ -625,6 +680,8 @@ export const ModelData = {
         },
         {
           name: "Triton",
+
+          sub_name : "Satellite",
 
           img: "triton moon.jpg",
 
@@ -656,6 +713,7 @@ export const ModelData = {
       },
 
       satellite: [
+        14,
         "Triton",
         "Proteus",
         "Nereid",

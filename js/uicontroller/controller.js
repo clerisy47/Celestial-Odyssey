@@ -78,18 +78,14 @@ export function toggleSound(planet_name) {
   );
   planet_sound.play();
   isPlaying = true;
-  WebState.ui_music.pause();
-  sound_box.classList.remove("fa-volume-off");
-  sound_box.classList.add("fa-volume-high");
 }
 
 export function stopSound() {
   toggleSoundBoxTippy("play");
   planet_sound?.pause();
   WebState.ui_music.play();
-  sound_box.classList.remove("fa-volume-high");
-  sound_box.classList.add("fa-volume-off");
   isPlaying = false;
+  sound_box.querySelector("#cross").style.opacity = "1";
 }
 
 var isBoxVisible = false;
