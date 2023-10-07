@@ -65,6 +65,7 @@ const sound_box = document.querySelector(".sound-box");
 
 export function toggleSound(planet_name) {
   if (!planet_name || isPlaying) {
+    if (WebState.isMusicOn) WebState.ui_music.play();
     stopSound();
     return;
   }
@@ -72,18 +73,16 @@ export function toggleSound(planet_name) {
   planet_sound = new Audio(
     `../../assets/sounds/planet_sounds/${planet_name}_sound.mp3`
   );
+  WebState?.ui_music.pause();
   planet_sound.play();
   isPlaying = true;
-  // sound_box.classList.remove("fa-volume-off");
-  // sound_box.classList.add("fa-volume-high");
   sound_box.querySelector("#cross").style.opacity = "0";
 }
 
 export function stopSound() {
   toggleSoundBoxTippy("play");
   planet_sound?.pause();
-  // sound_box.classList.remove("fa-volume-high");
-  // sound_box.classList.add("fa-volume-off");
+  if (WebState.isMusicOn) WebState.ui_music.play();
   isPlaying = false;
   sound_box.querySelector("#cross").style.opacity = "1";
 }
@@ -108,8 +107,11 @@ export function showPlanetBox() {
   enableHidePlanetsTippy(true);
 }
 
+var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
+
 export function hidePlanetBox() {
   if (!isBoxVisible) return;
+  click_sound.play();
   document
     .querySelector(".planet-text-box")
     .classList.remove("hide-planet-text-box");
@@ -159,7 +161,10 @@ export async function closeInfo() {
 
 var isInputBoxExpanded = false;
 
+var hover_sound = new Audio("../../assets/sounds/ui_sounds/hover_sound.mp3");
+
 export function toggleInpuBox() {
+  hover_sound.play();
   if (isInputBoxExpanded) hideInputBox();
   else showInputBox();
 }
