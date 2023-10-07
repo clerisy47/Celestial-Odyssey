@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="scene"></div>
+      <div id="wrap-effect">
+        <video
+          muted
+          autoplay
+          src="./assets/video/wrap.mov"
+          class="wrapVideo"
+          loop
+        ></video>
+      </div>
+      <img src="./assets/spaceship2.png" class="spaceship" />
+      <div class="ui">
+        <div class="vec1 box">
+          <img src="assets/design/Vector 3.png" alt="" />
+        </div>
+        <div class="planet-text-box box">
+          <h2 class="planet-text">Planets</h2>
+        </div>
+        <div class="planet-box box">
+          <div class="planet mercury">
+            <img src="assets/planet_images/mercury.png" alt="" />
+          </div>
+          <div class="planet venus">
+            <img src="assets/planet_images/venus.png" alt="" />
+          </div>
+          <div class="planet earth">
+            <img src="assets/planet_images/earth.png" alt="" />
+          </div>
+          <div class="planet mars">
+            <img src="assets/planet_images/mars.png" alt="" />
+          </div>
+          <div class="planet jupiter">
+            <img src="assets/planet_images/jupiter.png" alt="" />
+          </div>
+          <div class="planet saturn">
+            <img src="assets/planet_images/saturn.png" alt="" />
+          </div>
+          <div class="planet uranus">
+            <img src="assets/planet_images/uranus.png" alt="" />
+          </div>
+          <div class="planet neptune">
+            <img src="assets/planet_images/neptune.png" alt="" />
+          </div>
+        </div>
+        <div class="vec2 box">
+          <img src="assets/design/Vector 2.png" alt="" />
+        </div>
+        <i class="fa-solid fa-volume-off fa-2xl sound-box"></i>
+        <div class="image-box box uiBox"></div>
+        <div class="location-info-box box">
+          <p class="location-info-text-box box"></p>
+          <div class="location-info-box-closebtn box">X</div>
+        </div>
+        <div class="info-box box">info</div>
+        <div class="info-text-box box">
+          <p class="info-text"></p>
+          <div class="close-info-text-btn box">X</div>
+        </div>
+        <div class="data-box box uiBox"></div>
+        <div class="chatbot box">
+          <form class="input-box" novalidate="novalidate">
+            <div>
+              <input type="text" required />
+              <label class="placeholder">is there any question?</label>
+            </div>
+          </form>
+          <div class="bot-img">
+            <img src="assets/bot.png" alt="" />
+          </div>
+        </div>
+        <div class="askAI box">ask ai</div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/58d2d348a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
