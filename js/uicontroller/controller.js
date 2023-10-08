@@ -135,8 +135,8 @@ export function hidePlanetBox() {
 
 var isInfoOpen = false;
 
-export async function showInfo() {
-  if (!WebState.model) return;
+export async function showInfo(introText) {
+  if (!introText && !WebState.model) return;
   gsap.to(".info-box", { duration: 0.6, opacity: 0 });
   document.querySelector(".info-text-box").classList.add("show-info-text-box");
   await gsap.from(".info-text-box", {
@@ -144,7 +144,10 @@ export async function showInfo() {
     width: "0",
   });
   let element = document.querySelector(".info-text");
-  let text = ModelData[WebState.modelName].ui.info;
+  let text;
+  if (introText) text = ModelData.openingIntro;
+  else text = ModelData[WebState.modelName].ui.info;
+
   createTypingEffect(element, text);
   textToVoice(text);
   gsap.from(".info-text", { duration: 0.5, opacity: 0 });

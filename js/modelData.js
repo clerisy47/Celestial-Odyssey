@@ -11,7 +11,7 @@ export const ModelData = {
         {
           name: "Caloris Basin",
 
-          sub_name : "Crater",
+          sub_name: "Crater",
 
           lat: 30.5,
 
@@ -25,7 +25,7 @@ export const ModelData = {
         {
           name: "North Pole",
 
-          sub_name : "Pole",
+          sub_name: "Pole",
 
           lat: 90,
 
@@ -39,7 +39,7 @@ export const ModelData = {
         {
           name: "Mercury In Color",
 
-          sub_name : "Mercury In Color",
+          sub_name: "Mercury In Color",
 
           img: "mercury in color.jpg",
 
@@ -78,7 +78,7 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: [0,"No Satellite"],
+      satellite: [0, "No Satellite"],
     },
   },
   venus: {
@@ -95,7 +95,7 @@ export const ModelData = {
         {
           name: "Quetzalpetlatl Corona",
 
-          sub_name : "Volcano",
+          sub_name: "Volcano",
 
           lat: -68,
 
@@ -109,7 +109,7 @@ export const ModelData = {
         {
           name: "Maat Mons",
 
-          sub_name : "Volcano",
+          sub_name: "Volcano",
 
           lat: 0.5,
 
@@ -123,7 +123,7 @@ export const ModelData = {
         {
           name: "Mead Crater",
 
-          sub_name : "Crater",
+          sub_name: "Crater",
 
           lat: 12.5,
 
@@ -162,7 +162,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: [0,"No Satellite"],
+      satellite: [0, "No Satellite"],
     },
   },
 
@@ -177,7 +177,7 @@ export const ModelData = {
         {
           name: "Sagarmatha",
 
-          sub_name : "Mountain",
+          sub_name: "Mountain",
 
           lat: 27.9881,
 
@@ -191,7 +191,7 @@ export const ModelData = {
         {
           name: "Grand Canyon",
 
-          sub_name : "Canyon",
+          sub_name: "Canyon",
 
           lat: 36.107,
 
@@ -205,7 +205,7 @@ export const ModelData = {
         {
           name: "Great Barrier Reef",
 
-          sub_name : "",
+          sub_name: "",
 
           lat: -18.2871,
 
@@ -234,7 +234,7 @@ export const ModelData = {
         other: 1,
       },
 
-      satellite: [1,"Moon"],
+      satellite: [1, "Moon"],
     },
   },
 
@@ -250,7 +250,7 @@ export const ModelData = {
         {
           name: "Apollo 11 Landing Site",
 
-          sub_name : "Landing Site",
+          sub_name: "Landing Site",
 
           lat: 0.67416,
 
@@ -264,7 +264,7 @@ export const ModelData = {
         {
           name: "NASA Lunar Base Concept",
 
-          sub_name : "Base Concept",
+          sub_name: "Base Concept",
 
           img: "lunar base concept.jpg",
 
@@ -274,7 +274,7 @@ export const ModelData = {
         {
           name: "Lunar Water",
 
-          sub_name : "Water source",
+          sub_name: "Water source",
 
           img: "lunar water.jpg",
 
@@ -314,7 +314,7 @@ export const ModelData = {
         {
           name: "Olympus Mons",
 
-          sub_name : "Volcano",
+          sub_name: "Volcano",
 
           lat: 18.5,
 
@@ -322,13 +322,14 @@ export const ModelData = {
 
           img: "olympus mons.jpg",
 
-          script: "Olympus Mons, the crown jewel of Mars, is a colossal volcano that's truly out of this world! Standing at a towering 72,000 feet (21.9 kilometres), it's the tallest volcano in our solar system. Imagine skiing down slopes that stretch for hundreds of miles! But don't forget your spacesuit – with its otherworldly charm, this Martian giant is a must-see for any aspiring space tourist. ",
+          script:
+            "Olympus Mons, the crown jewel of Mars, is a colossal volcano that's truly out of this world! Standing at a towering 72,000 feet (21.9 kilometres), it's the tallest volcano in our solar system. Imagine skiing down slopes that stretch for hundreds of miles! But don't forget your spacesuit – with its otherworldly charm, this Martian giant is a must-see for any aspiring space tourist. ",
         },
 
         {
           name: "Valles Marineris",
 
-          sub_name : "Canyon",
+          sub_name: "Canyon",
 
           lat: -10.9,
 
@@ -336,13 +337,14 @@ export const ModelData = {
 
           img: "valles marineris.jpg",
 
-          script: "Welcome to Valles Marineris, Mars' own Grand Canyon on steroids! This colossal trench stretches for over 2,500 miles (4,000 kilometres) and plunges as deep as 7 miles (11 kilometres). It's like the ultimate thrill ride for space tourists, offering breathtaking Martian vistas and geological wonders. ",
+          script:
+            "Welcome to Valles Marineris, Mars' own Grand Canyon on steroids! This colossal trench stretches for over 2,500 miles (4,000 kilometres) and plunges as deep as 7 miles (11 kilometres). It's like the ultimate thrill ride for space tourists, offering breathtaking Martian vistas and geological wonders. ",
         },
 
         {
           name: "Hellas Planitia",
 
-          sub_name : "Crater",
+          sub_name: "Crater",
 
           lat: 40.4,
 
@@ -350,7 +352,8 @@ export const ModelData = {
 
           img: "hellas planitia.jpg",
 
-          script: "Welcome to Hellas Planitia, the Martian's very own 'Great Basin'! Picture an epic crater, so vast it could fit the entire country of France. With a diameter of about 1,400 miles and a depth reaching the lowest elevations on Mars, Hellas is one of the largest impact craters in the solar system. There has also been evidences that the ground here is rich with ice. ",
+          script:
+            "Welcome to Hellas Planitia, the Martian's very own 'Great Basin'! Picture an epic crater, so vast it could fit the entire country of France. With a diameter of about 1,400 miles and a depth reaching the lowest elevations on Mars, Hellas is one of the largest impact craters in the solar system. There has also been evidences that the ground here is rich with ice. ",
         },
       ],
 
@@ -376,7 +379,7 @@ export const ModelData = {
         other: 0.7,
       },
 
-      satellite: [2,"Deimos", "Phobos"],
+      satellite: [2, "Deimos", "Phobos"],
     },
   },
 
@@ -392,7 +395,7 @@ export const ModelData = {
         {
           name: "The Great Red Spot",
 
-          sub_name : "Storm",
+          sub_name: "Storm",
 
           lat: -14,
 
@@ -406,7 +409,7 @@ export const ModelData = {
         {
           name: "Jupiter's Interior",
 
-          sub_name : "Structure",
+          sub_name: "Structure",
 
           img: "jupiter with no land.webp",
 
@@ -416,7 +419,7 @@ export const ModelData = {
         {
           name: "High Above Jupiter's Sky",
 
-          sub_name : "Sky",
+          sub_name: "Sky",
 
           img: "high above jupiters sky.webp",
 
@@ -477,7 +480,7 @@ export const ModelData = {
         {
           name: "Titan",
 
-          sub_name : "Satellite",
+          sub_name: "Satellite",
 
           img: "titan.jpg",
 
@@ -487,7 +490,7 @@ export const ModelData = {
         {
           name: "The Great White Spot",
 
-          sub_name : "Storm",
+          sub_name: "Storm",
 
           lat: 23,
 
@@ -501,7 +504,7 @@ export const ModelData = {
         {
           name: "Dragon Storm",
 
-          sub_name : "Storm",
+          sub_name: "Storm",
 
           lat: -26,
 
@@ -568,7 +571,7 @@ export const ModelData = {
         {
           name: "Polar Cyclone",
 
-          sub_name : "Cyclone",
+          sub_name: "Cyclone",
 
           img: "polar cyclone.jpg",
 
@@ -578,7 +581,7 @@ export const ModelData = {
         {
           name: "Uranus Rings",
 
-          sub_name : "ring system",
+          sub_name: "ring system",
 
           img: "uranus rings.jpg",
 
@@ -588,7 +591,7 @@ export const ModelData = {
         {
           name: "Miranda",
 
-          sub_name : "Satellite",
+          sub_name: "Satellite",
 
           img: "miranda.webp",
 
@@ -653,7 +656,7 @@ export const ModelData = {
         {
           name: "The Great Dark Spot",
 
-          sub_name : "Storm",
+          sub_name: "Storm",
 
           lat: -12,
 
@@ -667,7 +670,7 @@ export const ModelData = {
         {
           name: "Wizard's Eye",
 
-          sub_name : "Storm",
+          sub_name: "Storm",
 
           lat: -36.5,
 
@@ -681,7 +684,7 @@ export const ModelData = {
         {
           name: "Triton",
 
-          sub_name : "Satellite",
+          sub_name: "Satellite",
 
           img: "triton moon.jpg",
 
@@ -730,4 +733,6 @@ export const ModelData = {
       ],
     },
   },
+  openingIntro:
+    "🚀 Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this app is your ticket to the cosmos.",
 };

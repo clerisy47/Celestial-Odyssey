@@ -7,6 +7,7 @@ import WebState, { addTracker, changeModel, removeTracker } from "./state";
 import { closeInfo, toggleSound } from "./uicontroller/controller";
 import { gsap } from "gsap";
 import { camera } from "../main";
+import { showIntro } from "./utils";
 
 const loader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
@@ -133,6 +134,8 @@ function plotPointOnEarth(radius, lat, lon, scene, pointScale) {
   addTracker(group);
 }
 
+let introduced = false;
+
 function load3d(scene, model) {
   let obj = {};
   obj.scale = ModelData[model].scale;
@@ -200,7 +203,12 @@ function load3d(scene, model) {
     changeModel(mesh, model);
   }
   toggleSound();
-  closeInfo();
+  if (!introduced) {
+    introduced = true;
+    // showIntro();
+  } else {
+    closeInfo();
+  }
 }
 
 function animateRotate(lat, long, duration, model) {

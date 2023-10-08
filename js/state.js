@@ -1,5 +1,7 @@
 import { gsap } from "gsap";
 import Initilize from "./uicontroller/uiMain";
+import { showIntro } from "./utils";
+import { toggleSound } from "./uicontroller/controller";
 
 var WebState = {
   model: null,
@@ -48,6 +50,8 @@ export function deleteUI() {
   document.querySelector(".location-info-text-box").textContent = "";
   document.querySelector(".info-box").classList.remove("show-info-box");
 }
+
+var introduced = false;
 
 export function changeModel(model, name) {
   removeTracker();
@@ -112,6 +116,11 @@ export function changeModel(model, name) {
         WebState.model = model;
         WebState.modelName = name;
         Initilize();
+        if (!introduced) {
+          introduced = true;
+          // WebState.ui_music.pause();
+          showIntro();
+        }
       },
     }
   );

@@ -1,8 +1,13 @@
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify
+import re
 
-flask_app = Flask(__name__)
+app = Flask(__name__)
+
+model_path = "./model"
+my_chat_model = GPT2LMHeadModel.from_pretrained(model_path)
+my_chat_tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 
 def generate_response(model, tokenizer, prompt, max_length=100, temperature=0.1, k=50):
     input_ids = tokenizer.encode(prompt, return_tensors="pt")
@@ -22,15 +27,20 @@ def generate_response(model, tokenizer, prompt, max_length=100, temperature=0.1,
 
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
+def extract_sentences(text):
+    sentences = re.split(r'(?<=[.!?])+', text)
+    if len(sentences) >= 3:
+        return sentences[1] + ' ' + sentences[2]
+    else:
+        return None
 
-model_path = "./model"
-my_chat_model = GPT2LMHeadModel.from_pretrained(model_path)
-my_chat_tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-
-prompt = input()
-print("Bot is thinking")
-response = generate_response(my_chat_model, my_chat_tokenizer, prompt, max_length=100)
-print("Generated response:", response)
+@app.route('/generate_response', methods=['POST'])
+def generate_response_api():
+    data = request.get_json()
+    prompt = data['prompt']
+    response = generate_response(my_chat_model, my_chat_tokenizer, prompt, max_length=100)
+    short_response = extract_sentences(response)
+    return jsonify({"response": short_response})
 
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    app.run(debug=True)
