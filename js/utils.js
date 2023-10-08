@@ -38,7 +38,11 @@ export function generateCUUID() {
 
 var timer = null;
 
-export function createTypingEffect(element, text) {
+export function createTypingEffect(element, text, isIntro) {
+  if (isIntro) {
+    element.innerHTML = text;
+    return;
+  }
   startInterval(element, text);
 }
 function startInterval(element, text) {
@@ -66,5 +70,5 @@ export function stopSpeech() {
 }
 
 export function showIntro() {
-  showInfo(ModelData.openingIntro);
+  showInfo(ModelData.openingIntro, false, true);
 }
