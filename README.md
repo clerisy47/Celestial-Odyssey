@@ -1,15 +1,8 @@
 # Celestial-Luminary
-Repository for nasa space apps challenge 2023
-
-# Collaborators
-![Sadina Upreti, Saphal Upreti, Utsav Acharya, Darshan Paudel, Rabin Lamichanne, Atul Tiwari](./collaborators.jpg)
-
-
-# Space Tourism 3D Planet Exploration
-
-![Space Tourism](space_tourism.jpg)
 
 Welcome to the Space Tourism 3D Planet Exploration project! This immersive application offers an exciting journey through our solar system, providing an educational and interactive experience for users interested in space tourism. Whether you're a curious child or an adult with a passion for the cosmos, this simulation has something for everyone.
+
+![Space Tourism](/assets/UI_description.png)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -20,6 +13,8 @@ Welcome to the Space Tourism 3D Planet Exploration project! This immersive appli
 6. [FAQs](#faqs)
 7. [Contributing](#contributing)
 8. [License](#license)
+9. [Contributors](#contributors)
+10. [References](#references)
 
 ---
 
@@ -127,6 +122,18 @@ We appreciate your interest in contributing to the Solar System 3D Planet Simula
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributors
+![Contributors](./collaborators.jpg)
+
+## References
++ 
++
++
++
++
+
+
 
 Thank you for choosing the Solar System 3D Planet Simulation! Embark on an educational adventure and explore the beauty and mysteries of our planetary neighbors.
 
