@@ -20,7 +20,7 @@ Welcome to the Celestial Odyssey! This immersive application offers an exciting 
 
 ## Introduction
 
-The Celestial Odyssey project was developed with the aim of providing a thrilling and educational experience for those interested in exploring the planets of our solar system. This interactive application is a perfect blend of education and entertainment, making it an ideal tool for schools, science centers, and all space enthusiasts.
+The Celestial Odyssey project was developed with the aim of providing a thrilling and educational experience for those interested in exploring the planets of our solar system. This interactive application is a perfect blend of education and entertainment, making it an ideal tool for schools, space tour visualization, science centers, and all space enthusiasts.
 
 ## Key Features
 
