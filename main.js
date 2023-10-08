@@ -214,7 +214,7 @@ document
   .addEventListener("keydown", async (e) => {
     if (e.key == "Enter") {
       await closeInfo("model_change");
-      const response = await fetch("http://127.0.0.1:5000/generate_response", {
+      const response = fetch("http://127.0.0.1:5000/generate_response", {
         method: "POST",
         body: JSON.stringify({
           prompt: e.target.value,
@@ -223,8 +223,10 @@ document
           "Content-Type": "application/json",
         },
       });
-      const data = await response.json();
-      showInfo(data.response, true);
+      // const data = await response.json();
+      // showInfo(data.response, true);
+      showInfo(response, true);
+
       // showInfo(ModelData.answer, true);
       document.querySelector("input").value = "";
     }
