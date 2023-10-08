@@ -55,24 +55,38 @@ To start your Space Tourism 3D Planet Exploration adventure, follow these steps:
 
    ```bash
    git clone https://github.com/clerisyutsav47/Celestial-Odyssey.git
+   ```
 
-2. Install the necessary dependencies:
+2. Change directory to the project folder:
+
+    ```bash
+    cd Celestial-Odyssey
+    ```
+
+3. Install the necessary dependencies:
 
     ```bash
     npm install
+    ```
 
-3. Launch the application : 
+4. Launch the application : 
 
     ```bash
     npm run dev
-4. Install the necessary python dependencies:
+    ```
+
+5. ## Open another terminal in same directory
+6. Install the necessary python dependencies:
 
     ```bash
     pip install -r requirements.txt
-5. Run the python application:
+    ```
+
+7. Run the python application:
 
     ```bash
     python app.py
+    ```
 ## Usage
 
 1. Upon launching the application, you'll be presented with a stunning 3D model of our solar system's planets.
