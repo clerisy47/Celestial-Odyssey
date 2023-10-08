@@ -121,21 +121,13 @@ body {
     transform-origin: -580px 0;
     animation: orbit2 60s linear infinite;
   }
-  @keyframes orbit2 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
   #saturn {
     transform-origin: -840px 0;
     animation: orbit2 145s linear infinite;
   }
   #uranus {
     transform-origin: -1140px 0;
-
+    
     animation: orbit2 420s linear infinite;
   }
   #neptune {
@@ -144,3 +136,12 @@ body {
     animation: orbit2 825s linear infinite;
   }
 }
+
+    @keyframes orbit2 {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }

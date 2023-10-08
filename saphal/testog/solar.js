@@ -18,8 +18,6 @@ try {
     (test = () => {
       if (document.documentElement.scrollWidth > 5000) {
         qnText.innerHTML = "";
-      } else {
-        qnText.innerHTML = "Where do you want to start your journey from?";
       }
     }),
     100
