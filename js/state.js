@@ -118,15 +118,14 @@ export function changeModel(model, name) {
         Initilize();
         if (!introduced) {
           introduced = true;
-          // WebState.ui_music.pause();
+          WebState?.ui_music.pause();
           showIntro();
         }
       },
     }
   );
-
   tl.play().then(() => {
-    if (WebState.isMusicOn) WebState.ui_music.play();
+    if (WebState.isMusicOn && false) WebState.ui_music.play();
   });
 }
 

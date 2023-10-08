@@ -20,6 +20,7 @@ import WebState from "./js/state";
 import { resetLocation } from "./js/uicontroller/uiMain";
 import { showIntro, stopInterval, stopSpeech } from "./js/utils";
 import { gsap } from "gsap";
+import { ModelData } from "./js/modelData";
 
 addToolTip();
 const elt3d = document.querySelector(".scene");
@@ -205,3 +206,15 @@ document.querySelector(".background-sound").addEventListener("click", (e) => {
     elt.dataset.played = "true";
   }
 });
+
+document.querySelector("form").addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    console.log(ModelData.answer);
+    document.querySelector("input").value = "";
+    showInfo(ModelData.answer, true);
+  }
+});
+// document.querySelector(".input-box").submit(() => {
+//   e.preventDefault();
+//   console.log(ModelData.answer);
+// });
