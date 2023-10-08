@@ -1,9 +1,11 @@
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)  
 
 model_path = "./model"
 my_chat_model = GPT2LMHeadModel.from_pretrained(model_path)
@@ -21,8 +23,6 @@ def generate_response(model, tokenizer, prompt, max_length=250):
         attention_mask=attention_mask,
         pad_token_id=pad_token_id
     )
-
-    return tokenizer.decode(output[0], skip_special_tokens=True)
 
     return tokenizer.decode(output[0], skip_special_tokens=True)
 
