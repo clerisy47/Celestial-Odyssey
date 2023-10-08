@@ -734,7 +734,7 @@ export const ModelData = {
     },
   },
   openingIntro:
-    "🚀 Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this app is your ticket to the cosmos.",
+    "🚀 Welcome to Celestial Odyssey!  Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this system is your ticket to the cosmos.        ",
   answer:
-    "Mars, often referred to as the Red Planet, is the fourth planet from the Sun in our Solar System. It is known for its distinctive reddish appearance, caused by iron oxide (rust) on its surface.",
+    "We can encounter space hazards like muscle atrophy, density loss and altered vision. Moreover due to its thin atmosphere and extreme temperature precise maneuvers are needed to explore around it.",
 };
