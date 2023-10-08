@@ -145,14 +145,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contributors
 ![Contributors](./collaborators.jpg)
 
-## References
-+ 
-+
-+
-+
-+
-
-
 
 Thank you for choosing the Solar System 3D Planet Simulation! Embark on an educational adventure and explore the beauty and mysteries of our planetary neighbors.
 
