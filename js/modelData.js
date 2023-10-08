@@ -11,6 +11,8 @@ export const ModelData = {
         {
           name: "Caloris Basin",
 
+          sub_name : "Crater",
+
           lat: 30.5,
 
           lon: -106,
@@ -21,7 +23,9 @@ export const ModelData = {
             "Mercury does not have a thick atmosphere to protect it from space debris. The small planet is riddled with craters, but none as spectacular as the Caloris Basin. “Basin” is what geologists call craters larger than about 186 miles (300 kilometres) in diameter. Caloris is about 950 miles (1,525 kilometres) across and is ringed by mile-high mountains. For scale, the state of Texas is 773 miles (1,244 kilometres) wide from east to west. ",
         },
         {
-          name: "North Pole Of Mercury",
+          name: "North Pole",
+
+          sub_name : "Pole",
 
           lat: 90,
 
@@ -34,6 +38,8 @@ export const ModelData = {
         },
         {
           name: "Mercury In Color",
+
+          sub_name : "Mercury In Color",
 
           img: "mercury in color.jpg",
 
@@ -72,15 +78,15 @@ export const ModelData = {
         Other: 8,
       },
 
-      satellite: [],
+      satellite: [0,"No Satellite"],
     },
   },
   venus: {
     type: "nasa",
 
-    // r: 2,
+    // r: 300,
 
-    scale: 0.8,
+    scale: 0.005,
 
     ui: {
       info: "It's a cloud-swaddled planet named for a love goddess, and often called Earth’s twin. But pull up a bit closer, and Venus turns hellish. Our nearest planetary neighbour, the second planet from the Sun, has a surface hot enough to melt lead. The atmosphere is so thick that, from the surface, the Sun is just a smear of light. ",
@@ -88,6 +94,8 @@ export const ModelData = {
       location: [
         {
           name: "Quetzalpetlatl Corona",
+
+          sub_name : "Volcano",
 
           lat: -68,
 
@@ -101,6 +109,8 @@ export const ModelData = {
         {
           name: "Maat Mons",
 
+          sub_name : "Volcano",
+
           lat: 0.5,
 
           lon: 194.6,
@@ -113,11 +123,13 @@ export const ModelData = {
         {
           name: "Mead Crater",
 
+          sub_name : "Crater",
+
           lat: 12.5,
 
           lon: 57.2,
 
-          img: "mead crater venus.jpg",
+          img: "mead crater venus.png",
 
           script:
             "Welcome to Mead Crater on Venus, where cosmic history is etched in impact scars! This massive bowl, roughly 170 miles (280 kilometres) wide, is like the granddaddy of all potholes. It's a reminder of our solar system's tumultuous past. The Magellan science team named this crater Mead, after Margaret Mead, the American Anthropologist",
@@ -150,7 +162,7 @@ export const ModelData = {
         "N₂": 4,
       },
 
-      satellite: [],
+      satellite: [0,"No Satellite"],
     },
   },
 
@@ -165,6 +177,8 @@ export const ModelData = {
         {
           name: "Sagarmatha",
 
+          sub_name : "Mountain",
+
           lat: 27.9881,
 
           lon: 86.925,
@@ -176,6 +190,8 @@ export const ModelData = {
 
         {
           name: "Grand Canyon",
+
+          sub_name : "Canyon",
 
           lat: 36.107,
 
@@ -189,6 +205,8 @@ export const ModelData = {
         {
           name: "Great Barrier Reef",
 
+          sub_name : "",
+
           lat: -18.2871,
 
           lon: 147.6992,
@@ -201,11 +219,8 @@ export const ModelData = {
 
       temperature: {
         min: -89,
-
         max: 58,
-
         mean: 15,
-
         unit: "°C",
       },
 
@@ -219,7 +234,7 @@ export const ModelData = {
         other: 1,
       },
 
-      satellite: ["Moon"],
+      satellite: [1,"Moon"],
     },
   },
 
@@ -235,6 +250,8 @@ export const ModelData = {
         {
           name: "Apollo 11 Landing Site",
 
+          sub_name : "Landing Site",
+
           lat: 0.67416,
 
           lon: 109,
@@ -245,7 +262,9 @@ export const ModelData = {
             "Hey future lunar explorers! Welcome to the moon's blockbuster stage—Apollo 11's historic landing site! This is where Neil Armstrong and Buzz Aldrin rocked the first moonwalk in 1969, leaving footprints and a lunar module named 'Eagle' as a testament to human ingenuity. Imagine stepping into their cosmic shoes, feeling the awe of this celestial movie set. Your lunar adventure begins here, where history and the moon collide!",
         },
         {
-          name: "Lunar Base Concept",
+          name: "NASA Lunar Base Concept",
+
+          sub_name : "Base Concept",
 
           img: "lunar base concept.jpg",
 
@@ -254,6 +273,8 @@ export const ModelData = {
         },
         {
           name: "Lunar Water",
+
+          sub_name : "Water source",
 
           img: "lunar water.jpg",
 
@@ -293,17 +314,21 @@ export const ModelData = {
         {
           name: "Olympus Mons",
 
+          sub_name : "Volcano",
+
           lat: 18.5,
 
           lon: -42.3,
 
           img: "olympus mons.jpg",
 
-          script: "The tallest volcano in the solar system",
+          script: "Olympus Mons, the crown jewel of Mars, is a colossal volcano that's truly out of this world! Standing at a towering 72,000 feet (21.9 kilometres), it's the tallest volcano in our solar system. Imagine skiing down slopes that stretch for hundreds of miles! But don't forget your spacesuit – with its otherworldly charm, this Martian giant is a must-see for any aspiring space tourist. ",
         },
 
         {
           name: "Valles Marineris",
+
+          sub_name : "Canyon",
 
           lat: -10.9,
 
@@ -311,11 +336,13 @@ export const ModelData = {
 
           img: "valles marineris.jpg",
 
-          script: "A vast canyon system",
+          script: "Welcome to Valles Marineris, Mars' own Grand Canyon on steroids! This colossal trench stretches for over 2,500 miles (4,000 kilometres) and plunges as deep as 7 miles (11 kilometres). It's like the ultimate thrill ride for space tourists, offering breathtaking Martian vistas and geological wonders. ",
         },
 
         {
           name: "Hellas Planitia",
+
+          sub_name : "Crater",
 
           lat: 40.4,
 
@@ -323,7 +350,7 @@ export const ModelData = {
 
           img: "hellas planitia.jpg",
 
-          script: "Impact place",
+          script: "Welcome to Hellas Planitia, the Martian's very own 'Great Basin'! Picture an epic crater, so vast it could fit the entire country of France. With a diameter of about 1,400 miles and a depth reaching the lowest elevations on Mars, Hellas is one of the largest impact craters in the solar system. There has also been evidences that the ground here is rich with ice. ",
         },
       ],
 
@@ -349,7 +376,7 @@ export const ModelData = {
         other: 0.7,
       },
 
-      satellite: ["Deimos", "Phobos"],
+      satellite: [2,"Deimos", "Phobos"],
     },
   },
 
@@ -365,6 +392,8 @@ export const ModelData = {
         {
           name: "The Great Red Spot",
 
+          sub_name : "Storm",
+
           lat: -14,
 
           lon: 100,
@@ -377,6 +406,8 @@ export const ModelData = {
         {
           name: "Jupiter's Interior",
 
+          sub_name : "Structure",
+
           img: "jupiter with no land.webp",
 
           script:
@@ -384,6 +415,8 @@ export const ModelData = {
         },
         {
           name: "High Above Jupiter's Sky",
+
+          sub_name : "Sky",
 
           img: "high above jupiters sky.webp",
 
@@ -407,6 +440,7 @@ export const ModelData = {
       },
 
       satellite: [
+        95,
         "Io",
         "Europa",
         "Ganymede",
@@ -443,6 +477,8 @@ export const ModelData = {
         {
           name: "Titan",
 
+          sub_name : "Satellite",
+
           img: "titan.jpg",
 
           script:
@@ -450,6 +486,8 @@ export const ModelData = {
         },
         {
           name: "The Great White Spot",
+
+          sub_name : "Storm",
 
           lat: 23,
 
@@ -462,6 +500,8 @@ export const ModelData = {
         },
         {
           name: "Dragon Storm",
+
+          sub_name : "Storm",
 
           lat: -26,
 
@@ -491,6 +531,7 @@ export const ModelData = {
       },
 
       satellite: [
+        146,
         "Titan",
         "Rhea",
         "Iapetus",
@@ -527,6 +568,8 @@ export const ModelData = {
         {
           name: "Polar Cyclone",
 
+          sub_name : "Cyclone",
+
           img: "polar cyclone.jpg",
 
           script:
@@ -535,6 +578,8 @@ export const ModelData = {
         {
           name: "Uranus Rings",
 
+          sub_name : "ring system",
+
           img: "uranus rings.jpg",
 
           script:
@@ -542,6 +587,8 @@ export const ModelData = {
         },
         {
           name: "Miranda",
+
+          sub_name : "Satellite",
 
           img: "miranda.webp",
 
@@ -574,6 +621,7 @@ export const ModelData = {
       },
 
       satellite: [
+        27,
         "Miranda",
         "Ariel",
         "Umbriel",
@@ -605,6 +653,8 @@ export const ModelData = {
         {
           name: "The Great Dark Spot",
 
+          sub_name : "Storm",
+
           lat: -12,
 
           lon: 135,
@@ -617,6 +667,8 @@ export const ModelData = {
         {
           name: "Wizard's Eye",
 
+          sub_name : "Storm",
+
           lat: -36.5,
 
           lon: -120,
@@ -628,6 +680,8 @@ export const ModelData = {
         },
         {
           name: "Triton",
+
+          sub_name : "Satellite",
 
           img: "triton moon.jpg",
 
@@ -659,6 +713,7 @@ export const ModelData = {
       },
 
       satellite: [
+        14,
         "Triton",
         "Proteus",
         "Nereid",

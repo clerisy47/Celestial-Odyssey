@@ -88,6 +88,7 @@ function plotPointOnEarth(radius, lat, lon, scene, pointScale) {
     color: 0x049ef4,
   });
   const boxMesh = new THREE.Mesh(box, boxMat);
+  console.log(boxMesh);
 
   let direction = new THREE.Vector3(x, y, z).normalize();
 
@@ -159,7 +160,6 @@ function load3d(scene, model) {
 
         earthModel.children[0].geometry.computeBoundingSphere();
 
-        console.log(earthModel.children[0].geometry.boundingSphere.radius);
         let r =
           earthModel.children[0].geometry.boundingSphere.radius * obj.scale;
 
@@ -172,7 +172,7 @@ function load3d(scene, model) {
         // plotPointOnEarth(r, 24.300682, 2.594174, scene, 0.02);
       },
       function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+        // console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
       },
       function (error) {
         console.log("An error happened");
@@ -196,6 +196,7 @@ function load3d(scene, model) {
     // plotPointOnEarth(obj.r, 30, 138, scene, 0.02);
 
     scene.add(mesh);
+    console.log(mesh);
     changeModel(mesh, model);
   }
   toggleSound();

@@ -5,10 +5,10 @@ import WebState from "../state";
 import { ModelData } from "../modelData";
 import { createTypingEffect } from "../utils";
 
-export function ImageBox(text, img) {
+export function ImageBox(text, img, name) {
   let imgId = generateCUUID();
   return `
-    <div class="ui1 ui-model">
+    <div class="ui1 ui-model" data-name="${name}">
     <svg width="286" height="179" viewBox="0 0 286 179" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
   <pattern id="${imgId}" patternUnits="userSpaceOnUse" width="100%" height="100%">
@@ -32,28 +32,29 @@ let i = 0;
 export function appendUIModel(code, type) {
   let uiElt = document.querySelector(`.${type}`);
   uiElt.innerHTML += code;
-  // uiElt.querySelectorAll(".ui1")[i++].addEventListener("click", (e) => {
-  //   console.log(e.currentTarget.textContent);
-  // });
-  // if (i === 3) i = 0;
 }
 
 export function addUI(type, obj) {
   if (type == "image-box") {
-    appendUIModel(ImageBox(obj.text, obj.img), type);
+    appendUIModel(ImageBox(obj.sub_name, obj.img, obj.name), type);
   }
 }
 
 export function addDataBox(heading, data) {
-  let mainPoint = data
+  let newData = data;
+  if (heading == "satellite") {
+    newData = data.slice(1, data.length);
+  }
+  let mainPoint = newData
     .map((d) => {
       return d + "</br>";
     })
     .join(" ");
-  console.log(mainPoint);
   let template = `
-            <div class="dataUi data1">
-            <h3>${heading}:</h3>
+            <div class="dataUi data1 ${heading}">
+            <h3>${
+              heading == "satellite" ? heading + ":  " + data[0] : heading
+            }</h3>
             <p>
               ${mainPoint}
             </p>
@@ -69,6 +70,7 @@ const sound_box = document.querySelector(".sound-box");
 
 export function toggleSound(planet_name) {
   if (!planet_name || isPlaying) {
+    if (WebState.isMusicOn) WebState.ui_music.play();
     stopSound();
     return;
   }
@@ -76,18 +78,18 @@ export function toggleSound(planet_name) {
   planet_sound = new Audio(
     `../../assets/sounds/planet_sounds/${planet_name}_sound.mp3`
   );
+  WebState?.ui_music.pause();
   planet_sound.play();
   isPlaying = true;
-  sound_box.classList.remove("fa-volume-off");
-  sound_box.classList.add("fa-volume-high");
+  sound_box.querySelector("#cross").style.opacity = "0";
 }
 
 export function stopSound() {
   toggleSoundBoxTippy("play");
   planet_sound?.pause();
-  sound_box.classList.remove("fa-volume-high");
-  sound_box.classList.add("fa-volume-off");
+  if (WebState.isMusicOn) WebState.ui_music.play();
   isPlaying = false;
+  sound_box.querySelector("#cross").style.opacity = "1";
 }
 
 var isBoxVisible = false;
@@ -102,17 +104,19 @@ export function showPlanetBox() {
   gsap.from(".vec1", { duration: 0.5, x: "21rem" });
   gsap.from(".vec2", { duration: 0.5, x: "-20.7rem" });
   gsap.from(".planet-box", {
-    duration: 0.8,
+    duration: 0.4,
     y: "-130%",
-    ease: "bounce",
     delay: 0.2,
   });
   isBoxVisible = true;
   enableHidePlanetsTippy(true);
 }
 
+var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
+
 export function hidePlanetBox() {
   if (!isBoxVisible) return;
+  click_sound.play();
   document
     .querySelector(".planet-text-box")
     .classList.remove("hide-planet-text-box");
@@ -162,7 +166,10 @@ export async function closeInfo() {
 
 var isInputBoxExpanded = false;
 
+var hover_sound = new Audio("../../assets/sounds/ui_sounds/hover_sound.mp3");
+
 export function toggleInpuBox() {
+  hover_sound.play();
   if (isInputBoxExpanded) hideInputBox();
   else showInputBox();
 }
@@ -176,12 +183,15 @@ export function showInputBox() {
     { width: "130px", left: "65%" },
     { width: "752px", left: "25%", duration: 0.8 }
   );
+  document.querySelector(".close-ai-btn").classList.add("show-close-ai-btn");
+  gsap.from(".close-ai-btn", { duration: 0.4, opacity: 0, delay: 0.7 });
   gsap.from(".input-box", { duration: 0.8, opacity: 0, delay: 0.5 });
   isInputBoxExpanded = true;
 }
 
 export function hideInputBox() {
   document.querySelector(".chatbot").classList.remove("expand-chatbot");
+  document.querySelector(".close-ai-btn").classList.remove("show-close-ai-btn");
   document.querySelector(".askAI").style.display = "inline";
   gsap.from(".askAI", { opacity: 0, duration: 0.5, delay: 0.6 });
   gsap.fromTo(

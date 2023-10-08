@@ -12,7 +12,7 @@ export function generateCUUID() {
     // Convert the buffer to a hex string
     const uuidArray = Array.from(buffer);
     const uuidHex = uuidArray
-      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .map((byte) => byte.toString(16).padStart(2, "0")) 
       .join("");
 
     // Format the UUID string with dashes
@@ -34,13 +34,19 @@ export function generateCUUID() {
   }
 }
 
-export function createTypingEffect(element, text, i = 0) {
-  if (i === text.length - 1) return;
-  if (i === 0) element.textContent = "";
-  element.textContent += text[i];
-  setTimeout(() => {
-    createTypingEffect(element, text, i + 1);
+var timer = null;
+
+export function createTypingEffect(element, text) {
+  startInterval(element, text);
+}
+function startInterval(element, text) {
+  let i = 0;
+  timer = setInterval(function () {
+    if (i < text.length) element.textContent += text[i++];
   }, 20);
+}
+export function stopInterval() {
+  if (timer) clearInterval(timer);
 }
 
 let speech = new SpeechSynthesisUtterance();
@@ -48,7 +54,11 @@ let voices = window.speechSynthesis.getVoices();
 export function textToVoice(text) {
   speech.text = text;
   speech.voice = voices[0];
-  speech.rate = 1.5;
+  speech.rate = 1;
   window.speechSynthesis.speak(speech);
   console.log(voices);
+}
+
+export function stopSpeech() {
+  if (speech) window.speechSynthesis.cancel();
 }

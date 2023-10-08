@@ -2,6 +2,8 @@ body {
   margin: 0;
   overflow: hidden;
   position: relative;
+  cursor: url("data:image/cur;base64,AAACAAEAICAAAAQAAQAoEAAAGAAAAAAAKAAAACAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKgAAAP8AAAD9AAAA7QAAAEYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQkJAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDJycn/3Nzc/9XV1f/AAAA7AAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkACgoKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFw9PT3/sLCw/6Wlpf9QUFD/AAAAzgAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCQAKCgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc05OTv/n5+f/Y2Nj/4SEhP82Njb/AAAAogAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkACQkJAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACNdXV1/+Li4v++vr7/Pj4+/4qKiv8gICD/AAAAbwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkJCQAJCQkACgoKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKWdnZ3/4uLh//Pz8/+SkpL/R0dH/5aWlv8NDQ35AAAAPQAAAAAAAAAAAAAAAAAAAAAAAAAACQkJAAkJCQAKCgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvLq6uv//////39/f//z8/P92dnb/ampq/5GRkf8DAwPoAAAAHAAAAAAAAAAAAAAAAAAAAAAJCQkACQkJAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADW0NDQ////////////29vb//n5+f9ubm7/kJCQ/319ff8AAADGAAAABgAAAAAAAAAAAAAAAAkJCQAJCQkACgoKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO3i4uL////////////x8fH/39/f/+3t7f92dnb/rKys/1xcXP8AAACZAAAAAAAAAAAQEBAACQkJAAkJCQAKCgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAAAA//Dw8P/////////////////S0tL/6+vr/9/f3/+FhYX/tLS0/y4uLv8AAABjAAAAABAQEAAJCQkACQkJAAoKCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAD/+/v7/////////////////+7u7v+rq6v/+vr6/9LS0v+Xl5f/paWl/xkZGfoQEBDdEBAQ3QkJCdsJCQnMCgoKzAAAAMwAAAC/AAAAuwAAALsAAAC0AAAAqgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANxAQEP///////////////////////////7m5uf+rq6v//////8nJyf+oqKj/xsbG/9nZ2f/n5+f/8PDw//f39//8/Pz////////////9/f3/5eXl/7q6uv8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABRMTEx/////////////////+/j1///////2tra/35+fv/Ly8v//////9XV1f/X19f/4+Pj/+vr6//x8fH/9/f3//z8/P//////////////////////19fX/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGlISEj/////////////////yaJ7/9G4oO739/f/uLi4/35+fv+/v7//0NDQ/9/f3//s7Oz/9/f3///////////////////////////////////////X19f/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgFtbW//////////////////FmWz/qm420One0eP+/v7/mZmZ/319ff+IiIj/j4+P/5WVlf+dnZ3/pKSk/7Kysv+7u7v/ycnJ/9LS0v/b29v/3t7e/zQ0NP8AAADUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACafHx8/////////////////7uIVP+iXxy6nlcQivTt6Pn19fX/kJCQ/4aGhv+MjIz/k5OT/5iYmP+enp7/paWl/6ampv+qqqr/q6ur/7Ozs/9LS0v+AAAAlAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALGhoaH////////////8+fb/toBK/5pPB62aTgKAoFoUjax3Raaxh1/svJ6B/sKtmv/AubT/tbW1/6Wlpf+hoaH/o6Oj/6ioqP+kpKT/HR0d6gAAAEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAysXFxf////////////Hn3v+2gk7/mU0CpJpOAoCaTgKFnFYmx6poK/+nZiX/u5Vq//n29f/W1tb/n5+f/6Kiov+lpaX/bGxs/wUFBbgAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4uLi////////////59XF/7mJXP6aTgKdl0wFj5pSKuWoZyf/qWwu/9S+p//4+Pj/t7e3/5eXl/+cnJz/pKSk/zc3N/gAAABxAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPr4+Pj////////////exq7/sn5U/JNNFLyhXCr2p2Uk/616R//r5Nz/4+Pj/5iYmP+RkZH/mJiY/4WFhf8SEhLVAAAALwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVDw8P/////////////////9S1k/+iYSr9pmMm/6dmJf++nnr/+/n4/8HBvv+FhYX/jIyL/5qamv9VVVX/AQEBlgAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC0qKir/////////////////yaJ5/6ZlI/+vdDn/4M6+/+/v7/+YmJj/fn5+/4WFhf+Li4v/JSUl6wAAAE4BAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARENDQ/////////////////++j1//wpRm/+/q5P/W1tb/enp6/3l5ef+EhIT/Y2Nj/woKCrsAAAAZAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeV1dX/////////////////+TSvv//////xcXF/2tra/90dHT/iIiH/z4+PvgAAAB0AAAAAQAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHVsbGz//////////////////////9nZ2f96enr/b29v/3d3d/8ZGRnXAAAAMgAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjoqKiv/////////////////09PT/lZWV/3Nzcv9SUlH/BAQEmQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACnsLCw/////////////////6qqqv91dXX/Kysr7AAAAFEEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL7U1NT///////////+vr6//XV1d/xAQELwAAAAbAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2PX19f/09PT/qKio/0BAQPoBAQF2AAAAAgAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATExMAExMTABMTEwATExPw2dnZ/4eHh/8gICDZAAAAMwEBAQAAAAAAAAAAAAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMjIwAjIyMAIyMjACMjI/dNTU3/CAgInAAAAAsAAAAAAQEBAAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFAAUFBQAFBQUABQUFrwAAAFMICAgAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+    default;
 }
 
 :root {
@@ -16,6 +18,10 @@ body {
 @font-face {
   font-family: sub-tech;
   src: url("/assets/fonts/Game Of Squids.otf");
+}
+@font-face {
+  font-family: digital-7;
+  src: url("/assets/fonts/Digital-7-400.otf"); /* Safari, Android, iOS */
 }
 
 #Vector_3 {
@@ -32,10 +38,12 @@ body {
 }
 .data-box {
   position: absolute;
+  z-index: 5;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
   border-radius: 1px;
+  justify-content: center;
 }
 
 .dataUi {
@@ -43,10 +51,35 @@ body {
   background: var(--ui-background);
 
   backdrop-filter: blur(5px);
-  font-family: Heading-tech;
+  font-family: digital-7;
   color: white;
-  padding: 10px;
   max-width: 200px;
+  padding-inline: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8d8d8db8;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #17607896;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #07354496;
+}
+
+.satellite {
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .dataUi.dark {
@@ -84,11 +117,11 @@ body {
   background: var(--ui-background);
   display: none;
 }
-.show-planet-box{
+.show-planet-box {
   display: flex;
 }
 
-.planet-text-box{
+.planet-text-box {
   height: 70px;
   width: 10rem;
   border: 2px solid var(--ui-border);
@@ -96,17 +129,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   top: 20px;
   left: 45vw;
   cursor: pointer;
 }
 
-.hide-planet-text-box{
+.hide-planet-text-box {
   display: none;
 }
 
-.planet-text{
+.planet-text {
   color: white;
   font-size: 1.7rem;
   font-family: Heading-tech;
@@ -114,24 +147,23 @@ body {
   text-transform: uppercase;
 }
 
-
-.vec1{
+.vec1 {
   position: absolute;
   top: 13px;
-  left: 40rem;
+  left: 42vw;
 }
-.vec2{
+.vec2 {
   position: absolute;
   top: 13px;
-  right: 39.7rem;
+  right: 41.5vw;
 }
 .vec1-expand {
-  left: 19rem;
+  left: 20vw;
   cursor: pointer;
 }
 
 .vec2-expand {
-  right: 16.9rem;
+  right: 17.8vw;
   cursor: pointer;
 }
 
@@ -146,7 +178,7 @@ body {
   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
 }
 
-.info-box{
+.info-box {
   border: 2px solid var(--ui-border);
   background: var(--ui-background);
   position: absolute;
@@ -160,11 +192,11 @@ body {
   display: none;
 }
 
-.show-info-box{
+.show-info-box {
   display: inline;
 }
 
-.info-text-box{
+.info-text-box {
   color: white;
   font-family: Heading-tech;
   font-style: italic;
@@ -181,11 +213,11 @@ body {
   display: none;
   cursor: default;
 }
-.show-info-text-box{
+.show-info-text-box {
   display: block;
 }
 
-.close-info-text-btn{
+.close-info-text-btn {
   padding: 0.2rem 0.6rem 0.2rem 0.4rem;
   border: 2px solid #00343499;
   background: rgba(88, 167, 211, 0.52);
@@ -195,12 +227,13 @@ body {
   top: 0.8rem;
   cursor: pointer;
 }
-.close-info-text-btn:hover, .location-info-box-closebtn:hover{
+.close-info-text-btn:hover,
+.location-info-box-closebtn:hover {
   font-size: x-large;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.location-info-box{
+.location-info-box {
   position: absolute;
   left: 3rem;
   top: 7rem;
@@ -211,10 +244,10 @@ body {
   cursor: pointer;
   display: none;
 }
-.show-location-info-box{
+.show-location-info-box {
   display: block;
 }
-.location-info-text-box{
+.location-info-text-box {
   color: white;
   font-family: Heading-tech;
   font-style: italic;
@@ -230,10 +263,10 @@ body {
   line-height: 1.5rem;
   /* display: none; */
   cursor: default;
-  overflow: hidden;
+  overflow: auto;
 }
 
-.location-info-box-closebtn{
+.location-info-box-closebtn {
   padding: 0.2rem 0.6rem 0.2rem 0.4rem;
   border: 2px solid #00343499;
   background: rgba(88, 167, 211, 0.52);
@@ -260,7 +293,7 @@ body {
   overflow: hidden;
 }
 
-.expand-chatbot{
+.expand-chatbot {
   width: 752px;
   border: 2px solid #00343499;
   background: rgba(88, 167, 211, 0.52);
@@ -275,7 +308,7 @@ body {
   width: 550px;
   display: none;
 }
-.show-input-box{
+.show-input-box {
   display: inline;
 }
 
@@ -319,17 +352,39 @@ body {
   right: 0;
 }
 
-.askAI{
+.askAI {
   border: 2px solid var(--ui-border);
-  background: var(--ui-background);
+  background: #08527ae0;
   position: absolute;
-  left: 55.8rem;
-  bottom: 3.5rem;
+  left: 59.9vw;
+  bottom: 4.25rem;
   font-family: Heading-tech;
   color: white;
   font-size: x-large;
   padding: 0.8rem;
   cursor: pointer;
+  transform: rotate(-90deg);
+}
+.close-ai-btn{
+  height: 100px;
+  width: 2vw;
+  border: 2px solid var(--ui-border);
+  border-right: none;
+  background: rgba(88, 167, 211, 0.52);
+  border-radius: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 23vw;
+  bottom: 6%;
+  color: white;
+  font-weight: bolder;
+  display: none;
+  cursor: pointer;
+}
+.show-close-ai-btn{
+  display: flex;
 }
 
 .ui-model {
@@ -393,17 +448,18 @@ body {
   filter: drop-shadow(0 0 10px rgba(2, 132, 132, 1));
 }
 
-svg:hover  #Vector_3 {
+svg:hover #Vector_3 {
   stroke-width: 5;
   animation-play-state: running;
 }
 svg:hover {
-filter: saturate(1.5);
+  filter: saturate(1.5);
 }
 
-.data-box{
-  background-color: var(--ui-background);
+.data-box {
+  /* background-color: var(--ui-background); */
   padding: 10px;
+  overflow: auto;
 }
 
 /* Add animation to make the effect pulsate */
@@ -423,25 +479,69 @@ filter: saturate(1.5);
   width: min-content;
 }
 
-
-
 .sound-box {
   position: absolute;
-  right: 17.5rem;
-  top: 8.5rem;
-  display: none;
+  right: 15.8rem;
+  top: 7.3rem;
   visibility: hidden;
   color: #7304c2;
   width: 2rem;
   height: 1.5rem;
 }
+.sound-btn {
+  width: 60px;
+  height: 40px;
+  background: #08527ae0;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--ui-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sound-btn svg {
+  width: 50px;
+  height: 25px;
+}
+.sound-btn path {
+  fill: white;
+}
 
 .show-sound-box {
-  display: inline;
   pointer-events: auto;
   cursor: pointer;
   visibility: visible;
 }
+
+.background-sound{
+  width: 40px;
+  height: 40px;
+  background: #08527ae0;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--ui-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 10;
+}
+
+
+.background-sound svg{
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.background-sound path{
+  fill: white;
+}
+
 
 .box {
   pointer-events: auto;
@@ -453,11 +553,19 @@ filter: saturate(1.5);
 /* Tippy theme */
 
 .tippy-box[data-theme~="tomato"] {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 77, 121, 1) 50%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: var(--ui-background);
+  background: #08527ae0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 1px solid var(--ui-border);
 }
+
+/* .planet::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+} */

@@ -11,33 +11,41 @@ function Initilize() {
   let model = WebState.modelName;
   let data = ModelData[model];
   data?.ui.location.forEach((location) => {
-    addUI("image-box", { text: location.name, img: location.img });
+    addUI("image-box", {
+      text: location.name,
+      img: location.img,
+      sub_name: location.sub_name,
+      name: location.name,
+    });
   });
-  addDataBox("Minerals", data?.ui.minerals);
-  addDataBox("satellite", data?.ui.satellite);
+  if (data.ui.minerals) addDataBox("Minerals", data?.ui.minerals);
+  if (data.ui.satellite) addDataBox("satellite", data?.ui.satellite);
   createGasChart();
   document.querySelector(".sound-box").classList.add("show-sound-box");
   document.querySelector(".info-box").classList.add("show-info-box");
-  document.querySelectorAll(".dataUi").forEach((eltData) => {
-    VanillaTilt.init(eltData, {
-      max: 5,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.4,
-    });
-  });
+  // document.querySelectorAll(".dataUi").forEach((eltData) => {
+  //   VanillaTilt.init(eltData, {
+  //     max: 5,
+  //     speed: 400,
+  //     glare: true,
+  //     "max-glare": 0.4,
+  //   });
+  // });
   //   addUI("chart-box", { text: "Gas Composition", chart: gasChart });
-
+  var click_sound = new Audio("../../assets/sounds/ui_sounds/click_sound.mp3");
   let ui_model = document.querySelectorAll(".ui-model");
   ui_model.forEach((uiM) => {
     uiM.addEventListener("click", (e) => {
-      showLocationData(e.currentTarget.children[1].textContent);
+      click_sound.play();
+      showLocationData(e.currentTarget.dataset.name);
       var eltIndex = Array.prototype.indexOf.call(
         uiM.parentElement.children,
         uiM
       );
       let location = ModelData[WebState.modelName].ui.location[eltIndex];
-      plotPointOnEarth(r, location.lat, location.lon, scene, 0.02);
+      if (location.lat && location.lon) {
+        plotPointOnEarth(r, location.lat, location.lon, scene, 0.02);
+      }
     });
   });
 }
@@ -45,7 +53,7 @@ function Initilize() {
 async function showLocationData(location) {
   let ui_model = document.querySelectorAll(".ui-model");
   ui_model.forEach((uiM) => {
-    if (uiM.children[1].textContent !== location) {
+    if (uiM.dataset.name !== location) {
       uiM.style.display = "none";
     }
   });
