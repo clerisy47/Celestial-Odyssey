@@ -648,6 +648,14 @@ svg:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.easter-egg{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+
 .overlay .btn::after {
   content: "";
   display: inline-block;
