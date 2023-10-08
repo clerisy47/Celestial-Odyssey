@@ -1,9 +1,10 @@
-import { generateCUUID, textToVoice } from "../utils";
+import { generateCUUID, stopSpeech, textToVoice } from "../utils";
 import { enableHidePlanetsTippy, toggleSoundBoxTippy } from "../toolTips";
 import { gsap } from "gsap";
 import WebState from "../state";
 import { ModelData } from "../modelData";
 import { createTypingEffect } from "../utils";
+import { stopInterval } from "../utils";
 
 export function ImageBox(text, img, name) {
   let imgId = generateCUUID();
@@ -93,7 +94,7 @@ export function stopSound() {
 }
 
 var isBoxVisible = false;
-
+var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
 export function showPlanetBox() {
   document
     .querySelector(".planet-text-box")
@@ -111,8 +112,6 @@ export function showPlanetBox() {
   isBoxVisible = true;
   enableHidePlanetsTippy(true);
 }
-
-var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
 
 export function hidePlanetBox() {
   if (!isBoxVisible) return;
@@ -137,7 +136,7 @@ var isInfoOpen = false;
 
 export async function showInfo(introText, isAi, isIntro) {
   if (!introText && !WebState.model) return;
-  if (WebState.isMusicOn) WebState.ui_music.pause();
+  if (WebState.isMusicOn && !isIntro) WebState.ui_music.pause();
   gsap.to(".info-box", { duration: 0.6, opacity: 0 });
   document.querySelector(".info-text-box").classList.add("show-info-text-box");
   await gsap.from(".info-text-box", {
@@ -148,9 +147,16 @@ export async function showInfo(introText, isAi, isIntro) {
   let text;
   if (introText) {
     if (isAi) {
-      text = introText;
+      try {
+        const res = await introText;
+        const data = await res.json();
+        text = data.response;
+        console.log(text);
+      } catch (err) {
+        console.log(err);
+      }
     } else {
-      text = ModelData.openingIntro;
+      text = `${ModelData.openingIntro}`;
     }
   } else text = ModelData[WebState.modelName].ui.info;
 
@@ -159,19 +165,25 @@ export async function showInfo(introText, isAi, isIntro) {
   gsap.from(".info-text", { duration: 0.5, opacity: 0 });
   isInfoOpen = true;
 }
-export async function closeInfo() {
+export async function closeInfo(parent) {
   if (!isInfoOpen) return;
+  stopSpeech();
+  stopInterval();
+  document.querySelector(".info-text").innerHTML = "";
   gsap.to(".info-box", { duration: 0.6, opacity: 1 });
-  document.querySelector(".info-text").textContent = "";
-  await gsap.to(".info-text-box", {
-    duration: 0.8,
-    width: "0",
-  });
+  if (!parent) {
+    await gsap.to(".info-text-box", {
+      duration: 0.8,
+      width: "0",
+    });
+  }
   document
     .querySelector(".info-text-box")
     .classList.remove("show-info-text-box");
   document.querySelector(".info-text-box").style.width = "43vw";
-  if (WebState.isMusicOn) WebState.ui_music.play();
+  if (WebState.isMusicOn && parent != "model_change") WebState.ui_music.play();
+  if (parent === "model_change") WebState.ui_music.pause();
+  isInfoOpen = false;
 }
 
 var isInputBoxExpanded = false;
