@@ -1,9 +1,11 @@
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)
 
 model_path = "./model"
 my_chat_model = GPT2LMHeadModel.from_pretrained(model_path)
