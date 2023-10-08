@@ -19,6 +19,7 @@ import {
 import WebState from "./js/state";
 import { resetLocation } from "./js/uicontroller/uiMain";
 import { stopInterval, stopSpeech } from "./js/utils";
+import { gsap } from "gsap";
 
 addToolTip();
 const elt3d = document.querySelector(".scene");
@@ -86,10 +87,10 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-initWebState(scene);
+// initWebState(scene);
 animate();
 // runSketch();
-load3d(scene, "earth");
+// load3d(scene, "earth");
 
 var hover_sound = new Audio("./assets/sounds/ui_sounds/hover_sound.mp3");
 var click_sound = new Audio("./assets/sounds/ui_sounds/click_sound.mp3");
@@ -161,6 +162,19 @@ document
     stopInterval();
     stopSpeech();
   });
+
+document.querySelector(".start-btn").addEventListener("click", () => {
+  gsap.to(document.querySelector(".overlay"), {
+    scale: 10,
+    opacity: 0,
+    transformOrigin: "center",
+    onComplete() {
+      document.querySelector(".overlay").remove();
+      initWebState(scene);
+      load3d(scene, "earth");
+    },
+  });
+});
 
 document.querySelector(".background-sound").addEventListener("click", (e) => {
   let elt = e.target;

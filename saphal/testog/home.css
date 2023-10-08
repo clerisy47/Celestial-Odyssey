@@ -7,7 +7,7 @@ body {
 }
 
 #svgText {
-    bottom: 1vh;
+  bottom: 1vh;
   position: absolute;
   font-weight: bold;
   font-size: 25vh;
