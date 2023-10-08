@@ -1,0 +1,146 @@
+body {
+  background: url(stars.jpg);
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#sun {
+  width: 33em;
+  max-width: fit-content;
+
+  margin-left: -25em;
+}
+
+#mercury {
+  width: 25px;
+  margin-left: 5.85px;
+}
+
+#venus {
+  width: 50px;
+  margin-left: 10.8px;
+}
+#earth {
+  width: 51px;
+  margin-left: 5.85px;
+}
+#mars {
+  width: 34.75px;
+  margin-left: 7.8px;
+}
+#jupiter {
+  width: 150px;
+  margin-left: 55.2px;
+}
+#saturn {
+  width: 200px;
+  margin-left: 81.15px;
+}
+#uranus {
+  width: 100px;
+  margin-left: 150px;
+}
+#neptune {
+  width: 100px;
+  margin-left: 179.4px;
+}
+
+.planet:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: transform 0.2s linear;
+}
+
+#planetName,
+#qn {
+  position: absolute;
+  margin-left: 7em;
+  margin-bottom: 25%;
+  margin-right: 50%;
+  font-size: 1em;
+  color: white;
+}
+
+#planetName {
+  margin-bottom: 20%;
+}
+
+@media screen and (min-width: 5000px) {
+  body {
+    background: url(stars.jpg);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    margin-left: 25%;
+  }
+
+  #planetName {
+    font-size: 10em;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+  }
+  #sun {
+    width: 500px;
+  }
+
+  #mercury {
+    width: 25px;
+
+    transform-origin: -260px 0;
+
+    animation: orbit2 1.2s linear infinite;
+  }
+  #venus {
+    width: 50px;
+    transform-origin: -315px 0;
+
+    animation: orbit2 3s linear infinite;
+  }
+  #earth {
+    width: 65.25px;
+    transform-origin: -380px 0;
+
+    animation: orbit2 5s linear infinite;
+  }
+  #mars {
+    width: 34.75px;
+    transform-origin: -435px 0;
+
+    animation: orbit2 10s linear infinite;
+  }
+  #jupiter {
+    transform-origin: -580px 0;
+    animation: orbit2 60s linear infinite;
+  }
+  @keyframes orbit2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  #saturn {
+    transform-origin: -840px 0;
+    animation: orbit2 145s linear infinite;
+  }
+  #uranus {
+    transform-origin: -1140px 0;
+
+    animation: orbit2 420s linear infinite;
+  }
+  #neptune {
+    transform-origin: -1420px 0;
+
+    animation: orbit2 825s linear infinite;
+  }
+}

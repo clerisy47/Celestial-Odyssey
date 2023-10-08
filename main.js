@@ -174,7 +174,7 @@ document.querySelector(".start-btn").addEventListener("click", () => {
 let easteregg = document.querySelector(".easter-egg");
 easteregg.addEventListener("click", () => {
   window.open(
-    "./saphal/testog/solar.html",
+    "./easteregg/testog/solar.html",
     "_blank" // <- This is what makes it open in a new window.
   );
 });

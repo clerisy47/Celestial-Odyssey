@@ -65,8 +65,14 @@ To start your Space Tourism 3D Planet Exploration adventure, follow these steps:
 
     ```bash
     npm run dev
+4. Install the necessary python dependencies:
 
+    ```bash
+    pip install -r requirements.txt
+5. Run the python application:
 
+    ```bash
+    python app.py
 ## Usage
 
 1. Upon launching the application, you'll be presented with a stunning 3D model of our solar system's planets.
