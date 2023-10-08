@@ -32,27 +32,30 @@ let i = 0;
 export function appendUIModel(code, type) {
   let uiElt = document.querySelector(`.${type}`);
   uiElt.innerHTML += code;
-  // uiElt.querySelectorAll(".ui1")[i++].addEventListener("click", (e) => {
-  //   console.log(e.currentTarget.textContent);
-  // });
-  // if (i === 3) i = 0;
 }
 
 export function addUI(type, obj) {
   if (type == "image-box") {
-    appendUIModel(ImageBox(obj.text, obj.img), type);
+    console.log(obj);
+    appendUIModel(ImageBox(obj.sub_name, obj.img), type);
   }
 }
 
 export function addDataBox(heading, data) {
-  let mainPoint = data
+  let newData = data;
+  if (heading == "satellite") {
+    newData = data.slice(1, data.length);
+  }
+  let mainPoint = newData
     .map((d) => {
       return d + "</br>";
     })
     .join(" ");
   let template = `
             <div class="dataUi data1 ${heading}">
-            <h3>${heading}:</h3>
+            <h3>${
+              heading == "satellite" ? heading + ":  " + data[0] : heading
+            }</h3>
             <p>
               ${mainPoint}
             </p>
