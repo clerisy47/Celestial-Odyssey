@@ -365,6 +365,27 @@ body {
   cursor: pointer;
   transform: rotate(-90deg);
 }
+.close-ai-btn{
+  height: 100px;
+  width: 2vw;
+  border: 2px solid var(--ui-border);
+  border-right: none;
+  background: rgba(88, 167, 211, 0.52);
+  border-radius: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 23vw;
+  bottom: 6%;
+  color: white;
+  font-weight: bolder;
+  display: none;
+  cursor: pointer;
+}
+.show-close-ai-btn{
+  display: flex;
+}
 
 .ui-model {
   position: relative;

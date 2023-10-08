@@ -151,6 +151,9 @@ document.querySelector(".close-info-text-btn").addEventListener("click", () => {
 document.querySelector(".bot-img").addEventListener("click", toggleInpuBox);
 document.querySelector(".askAI").addEventListener("click", toggleInpuBox);
 document
+  .querySelector(".close-ai-btn")
+  .addEventListener("click", toggleInpuBox);
+document
   .querySelector(".location-info-box-closebtn")
   .addEventListener("click", () => {
     click_sound.play();

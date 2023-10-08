@@ -15,6 +15,7 @@ function Initilize() {
       text: location.name,
       img: location.img,
       sub_name: location.sub_name,
+      name: location.name,
     });
   });
   if (data.ui.minerals) addDataBox("Minerals", data?.ui.minerals);
@@ -36,7 +37,7 @@ function Initilize() {
   ui_model.forEach((uiM) => {
     uiM.addEventListener("click", (e) => {
       click_sound.play();
-      showLocationData(e.currentTarget.children[1].textContent);
+      showLocationData(e.currentTarget.dataset.name);
       var eltIndex = Array.prototype.indexOf.call(
         uiM.parentElement.children,
         uiM
@@ -52,12 +53,12 @@ function Initilize() {
 async function showLocationData(location) {
   let ui_model = document.querySelectorAll(".ui-model");
   ui_model.forEach((uiM) => {
-    if (uiM.children[1].textContent !== location) {
+    if (uiM.dataset.name !== location) {
       uiM.style.display = "none";
     }
   });
   let infoText = ModelData[WebState.modelName].ui.location.filter((l) => {
-    if (l.sub_name === location) return l;
+    if (l.name === location) return l;
   });
   infoText = infoText[0].script;
   let box = document.querySelector(".location-info-box");
