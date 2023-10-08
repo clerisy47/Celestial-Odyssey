@@ -75,14 +75,13 @@ To start your Space Tourism 3D Planet Exploration adventure, follow these steps:
     npm run dev
     ```
 
-5. ## Open another terminal in same directory
-6. Install the necessary python dependencies:
+5. Install the necessary python dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-7. Run the python application:
+6. Open another terminal in same directory and Run the python application:
 
     ```bash
     python app.py
