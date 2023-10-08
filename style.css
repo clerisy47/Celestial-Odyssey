@@ -23,6 +23,10 @@ body {
   font-family: digital-7;
   src: url("/assets/fonts/Digital-7-400.otf"); /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: jogansoft;
+  src: url("/assets/fonts/jogansoft.otf"); /* Safari, Android, iOS */
+}
 
 #Vector_3 {
   stroke: rgb(2 132 132 / 60%);
@@ -51,7 +55,7 @@ body {
   background: var(--ui-background);
 
   backdrop-filter: blur(5px);
-  font-family: digital-7;
+  font-family: jogansoft;
   color: white;
   max-width: 200px;
   padding-inline: 10px;
@@ -93,7 +97,7 @@ body {
 }
 
 .dataUi h3 {
-  font-family: sub-tech;
+  font-family: Heading-tech;
 }
 
 .image-box {
@@ -184,7 +188,7 @@ body {
   position: absolute;
   right: 20rem;
   top: 7rem;
-  font-family: Heading-tech;
+  font-family: Jogansoft;
   color: white;
   font-size: x-large;
   padding: 0.8rem;
@@ -198,7 +202,7 @@ body {
 
 .info-text-box {
   color: white;
-  font-family: Heading-tech;
+  font-family: jogansoft;
   font-style: italic;
   font-size: larger;
   width: 43vw;
@@ -237,9 +241,9 @@ body {
   position: absolute;
   left: 3rem;
   top: 7rem;
-  font-family: Heading-tech;
+  font-family: jogansoft;
   color: white;
-  font-size: x-large;
+  font-size: large;
   padding: 0.8rem;
   cursor: pointer;
   display: none;
@@ -249,7 +253,7 @@ body {
 }
 .location-info-text-box {
   color: white;
-  font-family: Heading-tech;
+  font-family: jogansoft;
   font-style: italic;
   font-size: 1rem;
   width: 17vw;
@@ -397,11 +401,11 @@ body {
 .ui-model p {
   position: absolute;
   right: 10px;
-  bottom: 3px;
+  bottom: -1px;
   /* font-family: sub-tech; */
-  font-family: Heading-tech;
+  font-family: jogansoft;
   pointer-events: none;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: white;
 }
 
@@ -647,6 +651,14 @@ svg:hover {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+.easter-egg{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
 
 .overlay .btn::after {
   content: "";
