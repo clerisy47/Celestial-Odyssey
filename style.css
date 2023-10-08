@@ -569,3 +569,108 @@ svg:hover {
   bottom: 0;
   left: 0;
 } */
+
+
+#svgText {
+  bottom: 1vh;
+  position: absolute;
+  font-weight: bold;
+  font-size: 25vh;
+  transition: 1s font-size;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+/* @media screen and (max-width: 750px){
+    svg{
+        font-size: 6em;
+    }   
+} */
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.overlay video {
+  width: 100vw;
+  height: 100vh;
+  /* margin: auto; */
+  object-fit: cover;
+  z-index: 20;
+  position: absolute;
+}
+
+.overlay svg{
+    z-index: 30;
+
+}
+
+.overlay svg rect {
+  fill: white;
+  mask: url(#mask);
+  opacity: 0.65;
+}
+
+.overlay .btn {
+  margin-top: 25%;
+  z-index: 30;
+  position: absolute;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.overlay .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.overlay .btn::after {
+  background-color: #fff;
+}
+
+.overlay .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.overlay .btn:hover{
+    cursor: pointer;
+}
+
