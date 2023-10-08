@@ -18,7 +18,7 @@ import {
 } from "./js/uicontroller/controller";
 import WebState from "./js/state";
 import { resetLocation } from "./js/uicontroller/uiMain";
-import { stopInterval, stopSpeech } from "./js/utils";
+import { showIntro, stopInterval, stopSpeech } from "./js/utils";
 
 addToolTip();
 const elt3d = document.querySelector(".scene");

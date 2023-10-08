@@ -1,3 +1,5 @@
+import { ModelData } from "./modelData";
+import { showInfo } from "./uicontroller/controller";
 export function generateCUUID() {
   const crypto = window.crypto || window.msCrypto;
 
@@ -12,7 +14,7 @@ export function generateCUUID() {
     // Convert the buffer to a hex string
     const uuidArray = Array.from(buffer);
     const uuidHex = uuidArray
-      .map((byte) => byte.toString(16).padStart(2, "0")) 
+      .map((byte) => byte.toString(16).padStart(2, "0"))
       .join("");
 
     // Format the UUID string with dashes
@@ -61,4 +63,8 @@ export function textToVoice(text) {
 
 export function stopSpeech() {
   if (speech) window.speechSynthesis.cancel();
+}
+
+export function showIntro() {
+  showInfo(ModelData.openingIntro);
 }
