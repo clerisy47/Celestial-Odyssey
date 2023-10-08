@@ -147,7 +147,14 @@ export async function showInfo(introText, isAi, isIntro) {
   let text;
   if (introText) {
     if (isAi) {
-      text = introText;
+      try {
+        const res = await introText;
+        const data = await res.json();
+        text = data.response;
+        console.log(text);
+      } catch (err) {
+        console.log(err);
+      }
     } else {
       text = `${ModelData.openingIntro}`;
     }

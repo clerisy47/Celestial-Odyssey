@@ -174,7 +174,7 @@ document.querySelector(".start-btn").addEventListener("click", () => {
 let easteregg = document.querySelector(".easter-egg");
 easteregg.addEventListener("click", () => {
   window.open(
-    "./saphal/testog/solar.html",
+    "./easteregg/testog/solar.html",
     "_blank" // <- This is what makes it open in a new window.
   );
 });
@@ -214,7 +214,20 @@ document
   .addEventListener("keydown", async (e) => {
     if (e.key == "Enter") {
       await closeInfo("model_change");
-      showInfo(ModelData.answer, true);
+      const response = fetch("http://127.0.0.1:5000/generate_response", {
+        method: "POST",
+        body: JSON.stringify({
+          prompt: e.target.value,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // const data = await response.json();
+      // showInfo(data.response, true);
+      showInfo(response, true);
+
+      // showInfo(ModelData.answer, true);
       document.querySelector("input").value = "";
     }
   });

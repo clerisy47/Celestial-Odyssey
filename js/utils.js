@@ -48,7 +48,7 @@ export function createTypingEffect(element, text, isIntro) {
 function startInterval(element, text) {
   let i = 0;
   timer = setInterval(function () {
-    if (i < text.length) element.textContent += text[i++];
+    if (i < text.length) element.innerHTML += text[i++];
   }, 20);
 }
 export function stopInterval() {

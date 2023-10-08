@@ -66,12 +66,16 @@ async function showLocationData(location) {
   let infoText = ModelData[WebState.modelName].ui.location.filter((l) => {
     if (l.name === location) return l;
   });
-  infoText = infoText[0].script;
+  let name = infoText[0].name;
+  let myScript = infoText[0].script;
   let box = document.querySelector(".location-info-box");
   box.classList.add("show-location-info-box");
   await gsap.from(".location-info-text-box", { duration: 0.5, height: 0 });
   let element = document.querySelector(".location-info-text-box");
-  createTypingEffect(element, infoText);
+  let heading = `<b><i>${infoText[0].name}</b></i>`;
+  element.innerHTML = heading;
+  element.innerHTML += "<br>";
+  createTypingEffect(element, myScript, false);
 }
 
 export function resetLocation() {
