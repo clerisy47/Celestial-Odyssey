@@ -1,0 +1,148 @@
+body {
+  background: url(stars.jpg);
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh; 
+  margin: 0;
+}
+
+#sun {
+    width: 33em;
+    max-width: fit-content;
+    /* height: 10em; */
+    /* opacity: 0; */
+    margin-left: -25em;
+  
+}
+
+#mercury{
+    width: 25px;
+    /* opacity: 0; */
+    margin-left: 5.85px;
+}
+
+#venus{
+    /* opacity: 0; */
+    width: 50px;
+    margin-left: 10.8px;
+
+}
+#earth{
+    /* opacity: 0; */
+    width: 51px;
+    margin-left: 5.85px;
+}
+#mars{
+    width: 34.75px;
+    /* opacity: 0; */
+    margin-left: 7.8px;
+}
+#jupiter{
+    width: 150px;
+    /* opacity: 0; */
+    margin-left: 55.2px;
+}
+#saturn{
+    /* opacity: 0; */
+    width: 200px;
+    margin-left: 81.15px;
+}
+#uranus{
+    width: 100px;
+    /* opacity: 0; */
+    margin-left: 150px;
+}
+#neptune{
+    width: 100px;
+    /* opacity: 0; */
+    margin-left: 179.4px;
+}
+
+.planet:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform 0.2s linear;
+}
+
+/* #sun:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    transition: transform 0.2s linear;
+} */
+
+#planetName,#qn{
+    position: absolute;
+    margin-left: 7em;
+    margin-bottom: 25%;
+    margin-right: 50%;
+    font-size: 1em;
+    color: white;
+}
+
+#planetName{
+    margin-bottom: 20%;
+}
+
+@media screen and (min-width: 5000px){
+    body {
+        background: url(stars.jpg);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0;
+        margin-left: 25%;
+      }
+      
+      #sun {
+        width: 500px;
+        height: 100%;
+        /* height: 10em; */
+        /* opacity: 0; */
+        margin-left: -350px;
+      }
+      
+      #mercury{
+          width: 25px;    
+          /* opacity: 0; */
+          margin-left: 5.85px;
+      }
+      #venus{
+          /* opacity: 0; */
+          width: 50px;
+          margin-left: 10.8px;
+      
+      }
+      #earth{
+          /* opacity: 0; */
+          width: 65.25px;
+          margin-left: 5.85px;
+      }
+      #mars{
+          /* opacity: 0; */
+          margin-left: 7.8px;
+      }
+      #jupiter{
+          /* opacity: 0; */
+          margin-left: 55.2px;
+      }
+      #saturn{
+          /* opacity: 0; */
+          margin-left: 81.15px;
+      }
+      #uranus{
+          /* opacity: 0; */
+          margin-left: 150px;
+      }
+      #neptune{
+          /* opacity: 0; */
+          margin-left: 179.4px;
+      }
+      
+      
+}
+
+

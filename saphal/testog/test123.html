@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #sun {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #planet1 {
+            background-color: red;
+            transform-origin: 0% 50%;
+            animation: rotatePlanet1 10s linear infinite;
+        }
+
+        #planet2 {
+            background-color: blue;
+            transform-origin: 0% 50%;
+            animation: rotatePlanet2 20s linear infinite;
+        }
+
+        #planet3 {
+            background-color: green;
+            transform-origin: 0% 50%;
+            animation: rotatePlanet3 30s linear infinite;
+        }
+
+        @keyframes rotatePlanet1 {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+
+        @keyframes rotatePlanet2 {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
+            }
+        }
+
+        @keyframes rotatePlanet3 {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(300px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sun"></div>
+    <div id="planet1" class="planet"></div>
+    <div id="planet2" class="planet"></div>
+    <div id="planet3" class="planet"></div>
+</body>
+</html>

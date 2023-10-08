@@ -5,10 +5,10 @@ import WebState from "../state";
 import { ModelData } from "../modelData";
 import { createTypingEffect } from "../utils";
 
-export function ImageBox(text, img) {
+export function ImageBox(text, img, name) {
   let imgId = generateCUUID();
   return `
-    <div class="ui1 ui-model">
+    <div class="ui1 ui-model" data-name="${name}">
     <svg width="286" height="179" viewBox="0 0 286 179" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
   <pattern id="${imgId}" patternUnits="userSpaceOnUse" width="100%" height="100%">
@@ -36,8 +36,7 @@ export function appendUIModel(code, type) {
 
 export function addUI(type, obj) {
   if (type == "image-box") {
-    console.log(obj);
-    appendUIModel(ImageBox(obj.sub_name, obj.img), type);
+    appendUIModel(ImageBox(obj.sub_name, obj.img, obj.name), type);
   }
 }
 
@@ -184,12 +183,15 @@ export function showInputBox() {
     { width: "130px", left: "65%" },
     { width: "752px", left: "25%", duration: 0.8 }
   );
+  document.querySelector(".close-ai-btn").classList.add("show-close-ai-btn");
+  gsap.from(".close-ai-btn", { duration: 0.4, opacity: 0, delay: 0.7 });
   gsap.from(".input-box", { duration: 0.8, opacity: 0, delay: 0.5 });
   isInputBoxExpanded = true;
 }
 
 export function hideInputBox() {
   document.querySelector(".chatbot").classList.remove("expand-chatbot");
+  document.querySelector(".close-ai-btn").classList.remove("show-close-ai-btn");
   document.querySelector(".askAI").style.display = "inline";
   gsap.from(".askAI", { opacity: 0, duration: 0.5, delay: 0.6 });
   gsap.fromTo(
