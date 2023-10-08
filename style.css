@@ -23,6 +23,10 @@ body {
   font-family: digital-7;
   src: url("/assets/fonts/Digital-7-400.otf"); /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: jogansoft;
+  src: url("/assets/fonts/jogansoft.otf"); /* Safari, Android, iOS */
+}
 
 #Vector_3 {
   stroke: rgb(2 132 132 / 60%);
@@ -51,7 +55,7 @@ body {
   background: var(--ui-background);
 
   backdrop-filter: blur(5px);
-  font-family: digital-7;
+  font-family: jogansoft;
   color: white;
   max-width: 200px;
   padding-inline: 10px;
