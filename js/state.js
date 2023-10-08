@@ -1,7 +1,8 @@
 import { gsap } from "gsap";
 import Initilize from "./uicontroller/uiMain";
 import { showIntro } from "./utils";
-import { toggleSound } from "./uicontroller/controller";
+import { closeInfo, toggleSound } from "./uicontroller/controller";
+import { ModelData } from "./modelData";
 
 var WebState = {
   model: null,
@@ -38,6 +39,7 @@ export function deleteModel() {
 }
 
 export function deleteUI() {
+  closeInfo("model_change");
   WebState?.ui_music.pause();
   let boxes = document.querySelectorAll(".uiBox");
   boxes.forEach((elt) => {
@@ -116,16 +118,18 @@ export function changeModel(model, name) {
         WebState.model = model;
         WebState.modelName = name;
         Initilize();
-        if (!introduced) {
-          introduced = true;
-          WebState?.ui_music.pause();
-          showIntro();
-        }
       },
     }
   );
   tl.play().then(() => {
-    if (WebState.isMusicOn) WebState.ui_music.play();
+    if (WebState.isMusicOn) {
+      WebState.ui_music.play();
+    }
+
+    if (!introduced) {
+      showIntro(ModelData.openingIntro);
+      introduced = true;
+    }
   });
 }
 

@@ -124,12 +124,6 @@ function enablePlanetClick() {
   });
 }
 
-document.querySelectorAll(".planet").forEach((p) => {
-  p.addEventListener("mouseenter", function () {
-    console.log("hovered");
-  });
-});
-
 document.querySelector(".sound-box").addEventListener("click", () => {
   toggleSound(WebState.modelName);
 });
@@ -215,13 +209,15 @@ document.querySelector(".background-sound").addEventListener("click", (e) => {
   }
 });
 
-document.querySelector("form").addEventListener("keydown", (e) => {
-  if (e.key == "Enter") {
-    console.log(ModelData.answer);
-    document.querySelector("input").value = "";
-    showInfo(ModelData.answer, true);
-  }
-});
+document
+  .querySelector(".input-box input")
+  .addEventListener("keydown", async (e) => {
+    if (e.key == "Enter") {
+      await closeInfo("model_change");
+      showInfo(ModelData.answer, true);
+      document.querySelector("input").value = "";
+    }
+  });
 // document.querySelector(".input-box").submit(() => {
 //   e.preventDefault();
 //   console.log(ModelData.answer);

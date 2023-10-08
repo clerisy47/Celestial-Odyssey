@@ -199,15 +199,7 @@ function load3d(scene, model) {
     // plotPointOnEarth(obj.r, 30, 138, scene, 0.02);
 
     scene.add(mesh);
-    console.log(mesh);
     changeModel(mesh, model);
-  }
-  toggleSound();
-  if (!introduced) {
-    introduced = true;
-    // showIntro();
-  } else {
-    closeInfo();
   }
 }
 
