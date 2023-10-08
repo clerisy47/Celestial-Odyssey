@@ -733,5 +733,6 @@ export const ModelData = {
       ],
     },
   },
-  openingIntro: "This is intro script!!!",
+  openingIntro:
+    "🚀 Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this app is your ticket to the cosmos.",
 };

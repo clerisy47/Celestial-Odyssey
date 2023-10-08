@@ -205,7 +205,6 @@ function load3d(scene, model) {
   toggleSound();
   if (!introduced) {
     introduced = true;
-
     // showIntro();
   } else {
     closeInfo();
