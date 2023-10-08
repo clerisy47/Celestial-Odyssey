@@ -1,6 +1,6 @@
 import { addDataBox, addUI } from "./controller";
 import spaceImg from "/assets/sky.jpg";
-import WebState from "../state";
+import WebState, { removeTracker } from "../state";
 import { ModelData } from "../modelData";
 import { createGasChart } from "./graph";
 import VanillaTilt from "vanilla-tilt";
@@ -42,9 +42,15 @@ function Initilize() {
         uiM.parentElement.children,
         uiM
       );
+      console.log(ModelData[WebState.modelName]);
       let location = ModelData[WebState.modelName].ui.location[eltIndex];
-      if (location.lat && location.lon) {
+      if (
+        typeof location.lat === "number" &&
+        typeof location.lon === "number"
+      ) {
         plotPointOnEarth(r, location.lat, location.lon, scene, 0.02);
+      } else {
+        removeTracker();
       }
     });
   });
