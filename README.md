@@ -1,6 +1,6 @@
-# Celestial-Luminary
+# Celestial-Odyessy
 
-Welcome to the Space Tourism 3D Planet Exploration project! This immersive application offers an exciting journey through our solar system, providing an educational and interactive experience for users interested in space tourism. Whether you're a curious child or an adult with a passion for the cosmos, this simulation has something for everyone.
+Welcome to the Celestial Odyssey! This immersive application offers an exciting journey through our solar system, providing an educational and interactive experience for users interested in space tourism. Whether you're a curious child or an adult with a passion for the cosmos, this simulation has something for everyone.
 
 ![Space Tourism](/assets/UI_description.png)
 
@@ -20,7 +20,7 @@ Welcome to the Space Tourism 3D Planet Exploration project! This immersive appli
 
 ## Introduction
 
-The Space Tourism 3D Planet Exploration project was developed with the aim of providing a thrilling and educational experience for those interested in exploring the planets of our solar system. This interactive application is a perfect blend of education and entertainment, making it an ideal tool for schools, science centers, and all space enthusiasts.
+The Celestial Odyssey project was developed with the aim of providing a thrilling and educational experience for those interested in exploring the planets of our solar system. This interactive application is a perfect blend of education and entertainment, making it an ideal tool for schools, science centers, and all space enthusiasts.
 
 ## Key Features
 
@@ -54,7 +54,7 @@ To start your Space Tourism 3D Planet Exploration adventure, follow these steps:
 1. Clone the project's GitHub repository:
 
    ```bash
-   git clone https://github.com/YourOrganization/Space-Tourism-3D-Planets.git
+   git clone https://github.com/clerisyutsav47/Celestial-Odyssey.git
 
 2. Install the necessary dependencies:
 
