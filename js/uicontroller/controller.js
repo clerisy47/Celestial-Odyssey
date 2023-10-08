@@ -135,8 +135,9 @@ export function hidePlanetBox() {
 
 var isInfoOpen = false;
 
-export async function showInfo(introText) {
+export async function showInfo(introText, isAi) {
   if (!introText && !WebState.model) return;
+  if (WebState.isMusicOn) WebState.ui_music.pause();
   gsap.to(".info-box", { duration: 0.6, opacity: 0 });
   document.querySelector(".info-text-box").classList.add("show-info-text-box");
   await gsap.from(".info-text-box", {
@@ -145,8 +146,13 @@ export async function showInfo(introText) {
   });
   let element = document.querySelector(".info-text");
   let text;
-  if (introText) text = ModelData.openingIntro;
-  else text = ModelData[WebState.modelName].ui.info;
+  if (introText) {
+    if (isAi) {
+      text = introText;
+    } else {
+      text = ModelData.openingIntro;
+    }
+  } else text = ModelData[WebState.modelName].ui.info;
 
   createTypingEffect(element, text);
   textToVoice(text);
@@ -165,6 +171,7 @@ export async function closeInfo() {
     .querySelector(".info-text-box")
     .classList.remove("show-info-text-box");
   document.querySelector(".info-text-box").style.width = "43vw";
+  if (WebState.isMusicOn) WebState.ui_music.play();
 }
 
 var isInputBoxExpanded = false;
