@@ -14,7 +14,6 @@ Welcome to the Celestial Odyssey! This immersive application offers an exciting 
 7. [Contributing](#contributing)
 8. [License](#license)
 9. [Contributors](#contributors)
-10. [References](#references)
 
 ---
 
