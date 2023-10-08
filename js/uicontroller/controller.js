@@ -150,7 +150,7 @@ export async function showInfo(introText, isAi, isIntro) {
     if (isAi) {
       text = introText;
     } else {
-      text = ModelData.openingIntro;
+      text = `${ModelData.openingIntro}`;
     }
   } else text = ModelData[WebState.modelName].ui.info;
 

@@ -207,7 +207,7 @@ document.querySelector(".background-sound").addEventListener("click", (e) => {
   }
 });
 
-document.querySelector("form").addEventListener("keydown", (e) => {
+document.querySelector(".input-box input").addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
     console.log(ModelData.answer);
     document.querySelector("input").value = "";

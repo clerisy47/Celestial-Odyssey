@@ -185,7 +185,8 @@ export const ModelData = {
 
           img: "sagarmatha.jpg",
 
-          script: "Allow me to introduce you to the ultimate Earthly peak—Mount Everest. It's like our planet's towering challenge, standing at a jaw-dropping 29,032 feet (8,849 meters) above sea level. Climbing this colossal giant is a dream for daredevils and nature enthusiasts alike. ",
+          script:
+            "Allow me to introduce you to the ultimate Earthly peak—Mount Everest. It's like our planet's towering challenge, standing at a jaw-dropping 29,032 feet (8,849 meters) above sea level. Climbing this colossal giant is a dream for daredevils and nature enthusiasts alike. ",
         },
 
         {
@@ -199,7 +200,8 @@ export const ModelData = {
 
           img: "grand_canyon.jpg",
 
-          script: " Prepare to be wowed by Earth's natural masterpiece—the Grand Canyon. It's like Mother Nature's epic sculpture, carved by the Colorado River over millions of years, stretching for 277 miles (446 kilometers) and plunging a mile (1.6 kilometers) deep. This colossal chasm is a geologic wonder, revealing Earth's history layer by layer.",
+          script:
+            " Prepare to be wowed by Earth's natural masterpiece—the Grand Canyon. It's like Mother Nature's epic sculpture, carved by the Colorado River over millions of years, stretching for 277 miles (446 kilometers) and plunging a mile (1.6 kilometers) deep. This colossal chasm is a geologic wonder, revealing Earth's history layer by layer.",
         },
 
         {
@@ -207,13 +209,14 @@ export const ModelData = {
 
           sub_name: "Ocean",
 
-          lat: 0.11, 
+          lat: 0.11,
 
           lon: -130.57,
 
           img: "pacific ocean.jpg",
 
-          script: " Brace yourselves for the Pacific Ocean, Earth's aquatic superstar—it's like the oceanic 'outback' of our blue planet. Stretching over 60 million square miles (155 million square kilometers), this immense expanse is teeming with marine marvels, from vibrant coral reefs to mysterious deep-sea trenches. Dive into this watery wonderland during your planetary pitstop",
+          script:
+            " Brace yourselves for the Pacific Ocean, Earth's aquatic superstar—it's like the oceanic 'outback' of our blue planet. Stretching over 60 million square miles (155 million square kilometers), this immense expanse is teeming with marine marvels, from vibrant coral reefs to mysterious deep-sea trenches. Dive into this watery wonderland during your planetary pitstop",
         },
       ],
 
@@ -734,7 +737,7 @@ export const ModelData = {
     },
   },
   openingIntro:
-    "🚀 Welcome to Celestial Odyssey!  Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this system is your ticket to the cosmos.        ",
+    "🚀 Welcome to Celestial Odyssey!<br>Prepare for an out-of-this-world adventure where you'll explore the wonders of our Solar System like never before! Whether you're a young astronaut or a curious explorer, this system is your ticket to the cosmos.<br><br>Click on \"Planets\" button to load planets and sound button to hear actual planet's sound. ",
   answer:
     "We can encounter space hazards like muscle atrophy, density loss and altered vision. Moreover due to its thin atmosphere and extreme temperature precise maneuvers are needed to explore around it.",
 };
