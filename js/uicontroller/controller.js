@@ -135,7 +135,7 @@ export function hidePlanetBox() {
 
 var isInfoOpen = false;
 
-export async function showInfo(introText, isAi) {
+export async function showInfo(introText, isAi, isIntro) {
   if (!introText && !WebState.model) return;
   if (WebState.isMusicOn) WebState.ui_music.pause();
   gsap.to(".info-box", { duration: 0.6, opacity: 0 });
@@ -154,8 +154,8 @@ export async function showInfo(introText, isAi) {
     }
   } else text = ModelData[WebState.modelName].ui.info;
 
-  createTypingEffect(element, text);
-  textToVoice(text);
+  createTypingEffect(element, text, isIntro);
+  if (!isIntro) textToVoice(text);
   gsap.from(".info-text", { duration: 0.5, opacity: 0 });
   isInfoOpen = true;
 }

@@ -125,7 +125,7 @@ export function changeModel(model, name) {
     }
   );
   tl.play().then(() => {
-    if (WebState.isMusicOn && false) WebState.ui_music.play();
+    if (WebState.isMusicOn) WebState.ui_music.play();
   });
 }
 
