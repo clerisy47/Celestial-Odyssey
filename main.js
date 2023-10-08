@@ -178,14 +178,14 @@ document.querySelector(".start-btn").addEventListener("click", () => {
 
 document.querySelector(".background-sound").addEventListener("click", (e) => {
   let elt = e.target;
-  if (elt.parentElement.dataset.played == "true") {
+  if (elt.dataset.played == "true") {
     WebState?.ui_music.pause();
     WebState.isMusicOn = false;
     elt.innerHTML = `<svg width="85" height="156" viewBox="0 0 85 156" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M78.2015 0.0131009C76.115 0.0196009 73.8075 0.955601 71.7015 3.0551L34.528 45.1036H6.5C2.9185 45.1036 0 48.0221 0 51.6036V103.604C0 107.185 2.9185 110.104 6.5 110.104H34.5345L71.5 151.951C78 158.451 84.5 155.123 84.5 146.263V7.9236C84.5 2.7821 81.6855 -0.0193989 78.2015 0.000101114V0.0131009Z" fill="black"/>
 </svg>
 `;
-    elt.parentElement.dataset.played = "false";
+    elt.dataset.played = "false";
   } else {
     WebState?.ui_music.play();
     WebState.isMusicOn = true;
@@ -202,6 +202,6 @@ document.querySelector(".background-sound").addEventListener("click", (e) => {
             />
           </svg>
 `;
-    elt.parentElement.dataset.played = "true";
+    elt.dataset.played = "true";
   }
 });
