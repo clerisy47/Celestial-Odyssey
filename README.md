@@ -14,6 +14,7 @@ Welcome to the Celestial Odyssey! This immersive application offers an exciting 
 7. [Contributing](#contributing)
 8. [License](#license)
 9. [Contributors](#contributors)
+10. [References](#references)
 
 ---
 
@@ -143,6 +144,17 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contributors
 ![Contributors](./collaborators.jpg)
+
+## References
++ https://science.nasa.gov/ 
+
++ https://www.nasa.gov/ 
+
++ https://images.nasa.gov/ 
+
++ https://www.wikipedia.org/ 
+
++ All Planet Sounds From Space (In our Solar System) 
 
 
 Thank you for choosing the Solar System 3D Planet Simulation! Embark on an educational adventure and explore the beauty and mysteries of our planetary neighbors.
