@@ -2,6 +2,8 @@
 
 Welcome to the Celestial Odyssey! This immersive application offers an exciting journey through our solar system, providing an educational and interactive experience for users interested in space tourism. Whether you're a curious child or an adult with a passion for the cosmos, this simulation has something for everyone.
 
+Check out demo video: https://youtu.be/NDzLiopEcg4
+
 ![Space Tourism](/assets/UI_description.png)
 
 ## Table of Contents
